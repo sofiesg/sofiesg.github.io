@@ -20,4 +20,28 @@ body {
   border: 1px dashed rgba(255, 255, 255, 0.666);
   width: 400px;
   height: 200px;
+  color: #3c2a21;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.limebox {
+  background-color: limegreen;
+  padding: 10px;
+  /* flex: 1; */
+}
+
+.coralbox {
+  background-color: coral;
+  padding: 10px;
+  /* flex: 1; */
+}
+
+.plumbox {
+  background-color: plum;
+  padding: 10px;
+  /* flex: 1; */
 }
