@@ -57,7 +57,7 @@ p {
   border: 1px dashed brown;
   padding: 40px;
   font-size: 1.4rem;
-  background-color: aqua;
+  background-color: rgb(194, 255, 255);
   /* width: 200px; */
   /* line-height: 1.7; */
 }
@@ -66,4 +66,16 @@ p {
   font-family: "Sankofa Display", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+a {
+    color: blue;
+}
+
+a:hover {
+    color: pink;
+}
+
+p:hover {
+    color: chartreuse;
 }
