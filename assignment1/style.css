@@ -159,11 +159,14 @@ iframe {
   width: 500px;
   height: 375px;
 }
+/* I wanted the video to be bigger so it wouldn't looks so 
+awkward + take up more space as the page is pretty empty */
 
 span {
   font-style: italic;
   font-weight: 500;
 }
+/* I wanted to empathize my name */
 
 .footer {
   display: flex;
@@ -174,6 +177,8 @@ span {
 .footer p {
   margin: 2rem;
 }
+
+/* Giving some space, text and color to match the heading */
 
 #album {
   color: #020079;
