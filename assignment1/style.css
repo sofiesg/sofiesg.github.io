@@ -1,6 +1,42 @@
 body {
   font-family: roboto, calibri, sans-serif;
-  margin: 1rem;
+  margin: 4ch;
+  background-color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: bisque;
+  margin: 4ch;
+}
+
+header > nav {
+  display: flex;
+  align-items: center;
+}
+
+header > nav > a {
+  padding-right: 1em;
+  margin: 5ch;
+}
+
+h1,
+h2,
+h3,
+p,
+li,
+a {
+  color: black;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "REM", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 h1 {
