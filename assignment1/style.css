@@ -176,5 +176,9 @@ span {
 }
 
 #album {
+  color: #020079;
+}
+
+#album:hover {
   color: #6da1c9;
 }
