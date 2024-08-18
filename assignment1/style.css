@@ -160,6 +160,11 @@ iframe {
   height: 375px;
 }
 
+span {
+  font-style: italic;
+  font-weight: 500;
+}
+
 .footer {
   display: flex;
   justify-content: center;
@@ -170,7 +175,6 @@ iframe {
   margin: 2rem;
 }
 
-.footer span {
-  font-style: italic;
-  font-weight: 500;
+#album {
+  color: #6da1c9;
 }
