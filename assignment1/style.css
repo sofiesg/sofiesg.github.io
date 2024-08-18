@@ -117,7 +117,8 @@ h3 {
   font-weight: 450;
   margin: 0.5rem 0 0.5rem 0;
 }
-/* Emphasizing the questions while they still go as one 
+/* Sizing and giving weigth to the headers appropriate for their place in 
+the hierarchy. Emphasizing the question <h3> while they still go as one 
 with the rest of the section content*/
 
 p {
@@ -149,3 +150,27 @@ ul {
 }
 /* added margin at the bottom to seperate the answer from 
 the next question for better readability */
+
+img {
+  margin-bottom: 4ch;
+}
+
+iframe {
+  width: 500px;
+  height: 375px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #987d9a;
+}
+
+.footer p {
+  margin: 2rem;
+}
+
+.footer span {
+  font-style: italic;
+  font-weight: 500;
+}
