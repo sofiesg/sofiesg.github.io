@@ -1,25 +1,87 @@
 body {
   font-family: roboto, calibri, sans-serif;
-  margin: 4ch;
-  background-color: white;
+  margin: auto;
+  background-color: #f8ede3;
 }
+/* Background color here so the whole page gets it. Avoids ugly borders outside the main */
 
-header {
-  display: flex;
-  justify-content: space-between;
-  background-color: bisque;
-  margin: 4ch;
-}
-
-header > nav {
+.navbar {
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin: auto;
+  background-color: #987d9a;
 }
 
-header > nav > a {
-  padding-right: 1em;
-  margin: 5ch;
+.navbar h2 {
+  margin: 20px;
 }
+
+.navbar a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: large;
+}
+
+.navbar ul {
+  display: flex;
+  margin: 0;
+  padding-right: 2rem;
+}
+
+.navbar li:hover {
+  background-color: #bb9ab1;
+}
+
+.container .navbar {
+  justify-content: space-between;
+}
+
+.navbar ul li {
+  list-style-type: none;
+}
+
+.container .navbar ul li {
+  padding: 20px;
+  margin: 0 10px;
+}
+/* I wanted the header elements to be on the same line with 
+the <h2> and the <a>s to be on opposite ends. + some margins 
+so they got some space to breathe from the rest of the page*/
+
+.intro {
+  margin-left: 4rem;
+}
+
+.intro p {
+  margin-left: 5px;
+}
+/* p was further to the left than the h1. Both had margin so the 
+content wouldn't feel up the edge of the browser */
+
+article {
+  margin: 2rem 4rem 4rem 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* I didn't wantthe space between the intro part and the article 
+to be too far apart which is why amrgin top is less than the rest */
+
+article > section {
+  flex: 50%;
+  max-width: 40%;
+}
+
+/* The article and section are like this becuase wanted 
+to have the weeks side by side instead of just one long page. */
+
+li {
+  margin-left: 3rem;
+}
+/* I wanted to give the list an indent so it would be a clear separate visual
+ compared to the regular <p> answers. */
 
 h1,
 h2,
@@ -40,26 +102,50 @@ h3 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   margin: 2rem 2rem 1rem 0.2rem;
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin: 1.8rem 1rem 1rem 0.2rem;
 }
 
 h3 {
-  font-weight: 500;
+  font-weight: 450;
   margin: 0.5rem 0 0.5rem 0;
 }
+/* Emphasizing the questions while they still go as one 
+with the rest of the section content*/
+
+p {
+  margin-bottom: 4ch;
+}
+/* added margin at the bottom to seperate the paragraphs 
+for better readability */
 
 a {
   color: black;
+  text-decoration: none;
 }
 
-a:hover {
-  color: rgb(76, 20, 129);
+#subject {
+  font-style: italic;
 }
+/* I wanted the creators name to be emphasized as well as 
+show it could be a link without using the obvious underline. */
+
+a:hover {
+  color: #76a155;
+}
+/* Changing text color with hover to communicate 
+with users that there is a link they can interact with */
+
+ol,
+ul {
+  margin-bottom: 4ch;
+}
+/* added margin at the bottom to seperate the answer from 
+the next question for better readability */
