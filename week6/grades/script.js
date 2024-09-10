@@ -6,7 +6,7 @@ function checkGrade() {
   //   let total = parseFloat(a1.value) + parseFloat(a2.value);
   let a1Value = parseFloat(a1.value);
   let a2Value = parseFloat(a2.value);
-  let sum = calculateTotal(parseFloat(a1.value), parseFloat(a2.value));
+  let sum = calculateTotal(a1Value, a2Value);
   console.log("sum is", sum);
   sendReport(sum);
 }
