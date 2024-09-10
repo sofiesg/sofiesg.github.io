@@ -59,3 +59,6 @@ for (let i = 0; i < blogPosts.length; i++) {
         </section>
         `;
 }
+
+console.log(postContent);
+container.innerHTML = postContent;
