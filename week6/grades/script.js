@@ -24,17 +24,30 @@ function sendReport(score) {
   }
 }
 
-const para = document.querySelector("p");
-console.log(para);
+// const para = document.querySelector("p");
+// console.log(para);
 
-const allPara = document.querySelectorAll("p");
-console.log(allPara);
+// const allPara = document.querySelectorAll("p");
+// console.log(allPara);
 
 const h1 = document.querySelector("h1");
 console.log(h1);
 console.log(h1.textContent);
-h1.textContent = "This is a new heading";
+h1.classList.add("red-style");
+
+// h1.textContent = "This is a new heading";
+
+const question1 = document.querySelector("#question1");
 console.log(question1.textContent);
+question1.classList.add("red-style");
+question1.classList.add("blue-style");
+question1.classList.remove("blue-style");
+
+// question1.textContent = "What is as1 score?";
+
+// question2.textContent = "What is as2 score?"
+
+// console.log(question1.textContent);
 
 // const question1 = document.querySelector("#question1")
 
