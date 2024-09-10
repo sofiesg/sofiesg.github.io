@@ -52,3 +52,12 @@ input {
 .blue-style {
   color: blue;
 }
+
+.my-cat {
+  padding: 1px;
+  border: #e5e5cb;
+}
+
+.round {
+  border: 1px;
+}

@@ -43,6 +43,24 @@ question1.classList.add("red-style");
 question1.classList.add("blue-style");
 question1.classList.remove("blue-style");
 
+const myCat = document.querySelector("#my-cat");
+console.log(myCat);
+myCat.classList.add("round");
+
+function toggleMe() {
+  myCat.classList.toggle("round");
+}
+
+const header = document.querySelector("header");
+console.log(header);
+console.log(header.innerHTML);
+console.log(header.textContent);
+// header.textContent = "my cat 2"
+let personality = "cutest";
+let doubt = "doubt";
+header.innerHTML += `<p class="blue-style"> This is the ${personality}!</p>
+<p class="red-style"> do you have any ${doubt}? </p>`;
+
 // question1.textContent = "What is as1 score?";
 
 // question2.textContent = "What is as2 score?"
