@@ -24,6 +24,12 @@ function sendReport(score) {
   }
 }
 
+const para = document.querySelector("p");
+console.log(para);
+
+const allPara = document.querySelectorAll("p");
+console.log(allPara);
+
 // function checkGrade() {
 //   const a1 = document.querySelector("#answer1");
 //   const a1Value = parseFloat(a1.value); // Convert to number
