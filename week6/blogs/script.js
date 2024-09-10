@@ -58,7 +58,8 @@ for (let i = 0; i < blogPosts.length; i++) {
         <p>${blogPosts[i].content} </p>
         </section>
         `;
+  console.log("blog post", postContent);
 }
 
-console.log(postContent);
+// console.log(postContent);
 container.innerHTML = postContent;
