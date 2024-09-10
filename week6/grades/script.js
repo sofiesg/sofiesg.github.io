@@ -30,6 +30,17 @@ console.log(para);
 const allPara = document.querySelectorAll("p");
 console.log(allPara);
 
+const h1 = document.querySelector("h1");
+console.log(h1);
+console.log(h1.textContent);
+h1.textContent = "This is a new heading";
+console.log(question1.textContent);
+
+// const question1 = document.querySelector("#question1")
+
+// const allAbcd = document.querySelectorAll(".abcd");
+// console.log(allAbcd);
+
 // function checkGrade() {
 //   const a1 = document.querySelector("#answer1");
 //   const a1Value = parseFloat(a1.value); // Convert to number
