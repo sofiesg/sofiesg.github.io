@@ -2,6 +2,9 @@ const notify = document.querySelector("#notify");
 console.log(notify);
 // notify.play(); autoplays
 
+const myVideo = document.querySelector("#my-video");
+console.log(myVideo);
+
 const playButton = document.querySelector("#play-button");
 console.log(playButton);
 playButton.addEventListener("click", playAudio);
