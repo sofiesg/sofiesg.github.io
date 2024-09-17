@@ -1,15 +1,37 @@
-const myButton = document.querySelector("#my-button");
-console.log(myButton);
+// const myButton = document.querySelector("#my-button");
+// console.log(myButton);
 
-myButton.addEventListener("click", myFunction);
-let clickCount = 0;
-const count = document.querySelector("#count");
+// myButton.addEventListener("click", myFunction);
+// let clickCount = 0;
+// const count = document.querySelector("#count");
 
-function myFunction() {
-  console.log("Hey did you just click me?");
-  //   clickCount = clickCount +1;
-  clickCount++;
-  count.textContent = clickCount;
+// function myFunction() {
+//   console.log("Hey did you just click me?");
+//   //   clickCount = clickCount +1;
+//   clickCount++;
+//   count.textContent = clickCount;
+// }
+
+const boxContainer = document.querySelector(".box-container");
+console.log(boxContainer);
+
+const toggleButton = document.querySelector("#toggle-button");
+console.log(toggleButton);
+toggleButton.addEventListener("click", toggleMe);
+
+function toggleMe() {
+  console.log("toggle button is clicked");
+  boxContainer.classList.toggle("row-reverse");
+}
+
+const addButton = document.querySelector("#add-button");
+console.log(addButton);
+addButton.addEventListener("click", addMe);
+
+function addMe() {
+  console.log("add button is clicked");
+  boxContainer.innerHTML += `<div class="box purple-box"></div>
+        <div class="box coral-box"></div>`;
 }
 
 // let toggleButton = document.querySelector("#toggle-button");
