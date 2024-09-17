@@ -26,7 +26,7 @@ function toggleMe() {
 
 const addButton = document.querySelector("#add-button");
 console.log(addButton);
-addButton.addEventListener("dbclick", addMe);
+addButton.addEventListener("click", addMe);
 
 let count = 0;
 function addMe() {
@@ -39,6 +39,27 @@ function addMe() {
   //   boxContainer.innerHTML += `<div class="box purple-box"></div>
   //         <div class="box coral-box"></div>`;
   count++;
+}
+
+const removeButton = document.querySelector("#remove-button");
+console.log(removeButton);
+removeButton.addEventListener("click", removeMe);
+
+function removeMe() {
+  let lastBox = boxContainer.lastElementChild;
+  console.log(lastBox);
+  if (lastBox) {
+    lastBox.remove();
+  }
+  count--;
+}
+boxContainer.addEventListener("mosueover", dropMe);
+boxContainer.addEventListener("mosueout", pickMe);
+function dropMe() {
+  boxContainer.classList.add("drop");
+}
+function pickMe() {
+  boxContainer.classList.remove("drop");
 }
 
 // let toggleButton = document.querySelector("#toggle-button");
