@@ -26,7 +26,7 @@ function toggleMe() {
 
 const addButton = document.querySelector("#add-button");
 console.log(addButton);
-addButton.addEventListener("click", addMe);
+addButton.addEventListener("dbclick", addMe);
 
 let count = 0;
 function addMe() {
