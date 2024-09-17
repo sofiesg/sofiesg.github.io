@@ -28,10 +28,17 @@ const addButton = document.querySelector("#add-button");
 console.log(addButton);
 addButton.addEventListener("click", addMe);
 
+let count = 0;
 function addMe() {
   console.log("add button is clicked");
-  boxContainer.innerHTML += `<div class="box purple-box"></div>
-        <div class="box coral-box"></div>`;
+  if (count % 2 === 0) {
+    boxContainer.innerHTML += `<div class="box purple-box"></div>`;
+  } else {
+    boxContainer.innerHTML += `<div class="box coral-box"></div>`;
+  }
+  //   boxContainer.innerHTML += `<div class="box purple-box"></div>
+  //         <div class="box coral-box"></div>`;
+  count++;
 }
 
 // let toggleButton = document.querySelector("#toggle-button");

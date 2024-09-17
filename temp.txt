@@ -2,3 +2,12 @@ DOM object model
 Select:
 
 querySelector: 
+
+% -
+4/2 the result is 2
+4%2= 0 (reminder) is there anything remainding? reminder will always be zero if it's right.
+
+5/2 = 2.5
+5/2 = 2 { 1 as reminder }
+5%2 = 1
+53%2 = 1
