@@ -1,0 +1,13 @@
+body {
+  background-color: white;
+}
+
+.outer p,
+h1,
+h2,
+h3 {
+  color: #121413;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* vinrød: #591F1F */
