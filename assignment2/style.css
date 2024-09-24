@@ -31,8 +31,26 @@ body {
   font-size: 1.1rem;
 }
 
+.dark-mode {
+  background-color: #282828;
+  color: whitesmoke;
+}
+
+.dark-mode header,
+footer {
+  background-color: #250040;
+}
+
+.dark-mode footer {
+  background-color: #250040;
+}
+
+.dark-mode h2 {
+  color: whitesmoke;
+}
+
 .outer {
-  border: 2px dashed #e5e5cb68;
+  border: 2px #e5e5cb68;
   min-height: 200px;
   width: 100%;
   padding: 10px;
@@ -130,13 +148,12 @@ header {
   background-color: #591f1f;
   padding: 2rem;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .header p,
 a,
 li {
-  margin: 0 2ch 0 2ch;
   text-decoration: none;
   list-style-type: none;
   color: white;
@@ -165,10 +182,7 @@ a {
 footer {
   background-color: #591f1f;
   padding: 40px 100% 40px;
-}
-
-footer p {
-  color: #ffffff;
+  color: #dedede;
 }
 
 .outer h2 {
