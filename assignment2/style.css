@@ -46,7 +46,7 @@ footer {
 
 .outer {
   border: 2px #e5e5cb68;
-  min-height: 200px;
+  min-height: 250px;
   width: 100%;
   padding: 10px;
   display: flex;
@@ -96,14 +96,13 @@ img {
 }
 
 .video-controls button {
-  width: 120x;
-  height: 28px;
   background-color: #dedede;
   border: none;
+  border-radius: 8px;
 }
 
 .video-controls button img {
-  padding: 3px;
+  padding: 10px;
 }
 
 .timeline button {
@@ -202,6 +201,7 @@ footer {
   background-color: #c6bbee;
   border-color: #7765ba;
   border-radius: 10px;
+  border-style: solid;
 }
 
 .dark-mode h2 {

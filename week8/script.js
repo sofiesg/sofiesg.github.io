@@ -45,11 +45,11 @@ const videoTime = document.querySelector("#video-time");
 
 function showProgress() {
   const currentTime = myVideo.currentTime;
-  console.log("current time", currentTime.toFixed(2));
+  //   console.log("current time", currentTime.toFixed(2));
   videoTime.textContent = currentTime.toFixed(1);
   const progress = (currentTime / myVideo.duration) * 100;
   console.log("progress", progress.toFixed(2));
-  progressBar.style.width = progress + "%";
+  //   progressBar.style.width = progress + "%";
 }
 
 const step1Btn = document.querySelector("#step-1-btn");
@@ -88,4 +88,44 @@ function toggleFullScreen() {
   } else {
     document.exitFullscreen();
   }
+}
+
+// Important for playlist!! //
+// Can just add the video URL for our playlist
+
+const videos = [
+  {
+    name: "zenscape",
+    src: "zenscape.mp4",
+  },
+  {
+    name: "stardust",
+    src: "stardust.mp4",
+  },
+];
+
+const firstVideoBtn = document.querySelector("#first-video-btn");
+console.log(firstVideoBtn);
+
+const secondVideoBtn = document.querySelector("#second-video-btn");
+console.log(secondVideoBtn);
+
+firstVideoBtn.addEventListener("click", function () {
+  chooseVideo(0);
+  //  0 corresponds to first video
+});
+secondVideoBtn.addEventListener("click", function () {
+  chooseVideo(1);
+  // 1 corresponds to second video
+});
+
+const videoName = document.querySelector("#video-name");
+
+function chooseVideo(no) {
+  myVideo.scr = videos[no].src;
+  videoName.textContent = videos[no].name;
+  console.log;
+  myVideo.src;
+  myVideo.load();
+  myVideo.play();
 }

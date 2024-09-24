@@ -57,13 +57,14 @@ img {
   flex: 1;
 }
 
-/* .video-list button {
-    border-radius: 5px;
-  } */
+.video-list button {
+  border-radius: 5px;
+}
 
-/* .video-list button:hover {
-    scale: 0.97;
-  } */
+.video-list button:hover {
+  scale: 0.97;
+}
+
 .video-controls,
 .timeline {
   display: flex;
