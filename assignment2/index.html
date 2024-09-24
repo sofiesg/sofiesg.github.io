@@ -15,7 +15,7 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <header>
+    <header class="header">
       <h1>Study music playlist</h1>
       <nav>
         <ul>
@@ -23,48 +23,38 @@
           <li><a href="#">About</a></li>
         </ul>
       </nav>
+      <div id="mode">
+        <p>Dark/light mode</p>
+        <button>Change mode</button>
+      </div>
     </header>
     <div class="outer">
-      <!-- We divide the content of the box into three sections
-      1. video-container = it contains the videoplayer as well as playlist
-      2. video-title = it contains meta information about video currently being played
-      3. video-controls = it gives options for users to control the video such as 
-         play, pause, make it fullscreen etc.  -->
       <section class="video-container">
-        <!-- we further divide video-container into two sections
-        1. video player
-        2. video-list: a section containing clickable images of videos 
-           that can be played.  -->
         <video id="my-video" controls>
           <source src="stardust.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
         <section class="video-list">
-          <!-- We use buttons, whenever user clicks on them, the correspoding 
-          video will be played  -->
           <button id="first-video-btn">
-            <img id="first-video-img" src="zenscape.png" alt="Zenscape" />
+            <img id="first-video-img" src="jazz.jpg" alt="jazz" />
           </button>
           <button id="second-video-btn">
-            <img id="second-video-img" src="stardust.png" alt="stardust" />
+            <img id="second-video-img" src="zenscape.png" alt="zenscape" />
           </button>
         </section>
       </section>
       <section class="video-title">
-        <!-- in this section, we display the name of the video and current playtime -->
-        <h1>Now Playing: <span id="video-name"></span></h1>
-        <h1>Current playtime: <span id="video-time"></span></h1>
+        <h2>Now Playing: <span id="video-name"></span></h2>
+        <h2>Playtime: <span id="video-time"></span></h2>
       </section>
       <section class="video-controls">
-        <!-- Here we create controls using buttons to play pause video
-        as well as use a div to show progress.  -->
         <button id="play-pause-btn">
           <img
             id="play-pause-img"
             src="https://img.icons8.com/ios-glyphs/30/play--v1.png"
             alt="Play Button"
-            width="24"
+            width="30"
             height="24"
           />
         </button>
@@ -73,24 +63,6 @@
             id="mute-unmute-img"
             src="https://img.icons8.com/ios-glyphs/30/no-audio--v1.png"
             alt="Mute Button"
-            width="24"
-            height="24"
-          />
-        </button>
-        <button id="previous-btn">
-          <img
-            id="previous-img"
-            src="https://img.icons8.com/ios-glyphs/30/skip-to-start--v2.png"
-            alt="Previous Button"
-            width="24"
-            height="24"
-          />
-        </button>
-        <button id="next-btn">
-          <img
-            id="next-img"
-            src="https://img.icons8.com/ios-glyphs/30/end--v2.png"
-            alt="Next Button"
             width="24"
             height="24"
           />
@@ -107,42 +79,10 @@
             height="24"
           />
         </button>
-        <button id="decrease-volume-btn">
-          <img
-            id="decrease-volume-img"
-            src="https://img.icons8.com/ios-glyphs/30/low-volume.png"
-            alt="Decrease volume Button"
-            width="24"
-            height="24"
-          />
-        </button>
-        <button id="increase-volume-btn">
-          <img
-            id="increase-volume-img"
-            src="https://img.icons8.com/ios-glyphs/30/high-volume--v1.png"
-            alt="Increase volume Button"
-            width="24"
-            height="24"
-          />
-        </button>
-      </section>
-      <section class="timeline">
-        <button id="step-1-btn">step 1</button>
-        <button id="like-btn">
-          <img
-            id="like-img"
-            src="https://img.icons8.com/ios-filled/50/facebook-like.png"
-            alt="Like Button"
-            width="24"
-            height="24"
-          />
-        </button>
-        <span>Total likes: <span id="likes"></span></span>
       </section>
     </div>
     <footer>
-      <a href="https://icons8.com/icon/61001/mute">Mute</a> icon by
-      <a href="https://icons8.com">Icons8</a>
+      <p>Icons are by: <a href="https://icons8.com">Icons8</a></p>
     </footer>
   </body>
 </html>
