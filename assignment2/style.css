@@ -27,7 +27,6 @@ body {
   font-weight: 400;
   font-style: normal;
   color: #121413;
-  /* color: #3c2a21; */
   font-size: 1.1rem;
 }
 
@@ -38,15 +37,11 @@ body {
 
 .dark-mode header,
 footer {
-  background-color: #250040;
+  background-color: #180227;
 }
 
 .dark-mode footer {
-  background-color: #250040;
-}
-
-.dark-mode h2 {
-  color: whitesmoke;
+  background-color: #180227;
 }
 
 .outer {
@@ -145,7 +140,7 @@ img {
 header {
   display: flex;
   flex-direction: row;
-  background-color: #591f1f;
+  background-color: #d3d3ff;
   padding: 2rem;
   width: 100%;
   justify-content: space-around;
@@ -156,22 +151,32 @@ a,
 li {
   text-decoration: none;
   list-style-type: none;
-  color: white;
 }
 
-nav {
+nav ul {
+  list-style: none;
   display: flex;
-  flex: row;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-right: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
 }
 
 h1 {
   font-size: 2ch;
   margin-right: 3rem;
-  color: white;
 }
 
 a {
   align-content: space-around;
+  color: black;
+  font-weight: bold;
 }
 
 .mode {
@@ -180,11 +185,33 @@ a {
 }
 
 footer {
-  background-color: #591f1f;
+  background-color: #d3d3ff;
   padding: 40px 100% 40px;
-  color: #dedede;
+  width: 100%;
 }
 
 .outer h2 {
   color: #121413;
+}
+
+#mode {
+  width: 150px;
+  padding: 5px;
+  background-color: #c6bbee;
+  border-color: #7765ba;
+  border-radius: 10px;
+}
+
+.dark-mode h2 {
+  color: whitesmoke;
+}
+
+.dark-mode #mode {
+  color: whitesmoke;
+  background-color: #6c458b;
+  border-color: #524061;
+}
+
+.dark-mode .progress-bar {
+  color: #dedede;
 }

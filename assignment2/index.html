@@ -23,10 +23,9 @@
           <li><a href="about.html">About</a></li>
         </ul>
       </nav>
-      <div onclick="myFunction()">
-        <p>Dark/light mode</p>
-        <button>Change mode</button>
-      </div>
+        <h2>Dark/light mode</h2>
+        <button onclick="myFunction()" id="mode">Change mode</button>
+        <!-- button is in header so it has familair design, making the button easy to find for user  -->
     </header>
     <div class="outer">
       <section class="video-container">
@@ -45,11 +44,11 @@
         </section>
       </section>
       <section class="video-title">
-        <h2>Now Playing: <span id="video-name"></span></h2>
-        <h2>Playtime: <span id="video-time"></span></h2>
+        <h2>Now Playing:</h2>
+        <h2>Playtime:</span></h2>
       </section>
       <section class="video-controls">
-        <button id="play-pause-btn">
+        <button id="play-pause">
           <img
             id="play-pause-img"
             src="https://img.icons8.com/ios-glyphs/30/play--v1.png"
@@ -58,7 +57,7 @@
             height="24"
           />
         </button>
-        <button id="mute-unmute-btn">
+        <button id="mute-unmute">
           <img
             id="mute-unmute-img"
             src="https://img.icons8.com/ios-glyphs/30/no-audio--v1.png"
