@@ -41,7 +41,7 @@ function toggleSound() {
 myVideo.addEventListener("timeupdate", showProgress);
 
 const progressBar = document.querySelector("#progress-bar-fill");
-const videoTime = myVideo.document.querySelector("#video-time");
+const videoTime = document.querySelector("#video-time");
 
 function showProgress() {
   const currentTime = myVideo.currentTime;
@@ -68,7 +68,7 @@ function gotoStep2() {
   myVideo.currentTime = 47.45;
 }
 
-const likes = doc.querySelector("#likes");
+const likes = document.querySelector("#likes");
 console.log(likes);
 
 let likeCount = 0;
@@ -78,4 +78,14 @@ likesBtn.addEventListener("click", addLikes);
 function addLikes() {
   likeCount++;
   likes.textContent = likeCount;
+}
+
+myVideo.addEventListener("dblclick", toggleFullScreen);
+
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+    myVideo.requestFullscreen();
+  } else {
+    document.exitFullscreen();
+  }
 }
