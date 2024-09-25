@@ -143,6 +143,7 @@ header {
   padding: 2rem;
   width: 100%;
   justify-content: space-around;
+  align-items: center;
 }
 
 .header p,
@@ -152,15 +153,26 @@ li {
   list-style-type: none;
 }
 
+.header div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
+  gap: 100%;
 }
 
-nav ul li {
-  margin-right: 30px;
-}
+/* nav li {
+  margin-right: 100%;
+} */
 
 nav a {
   text-decoration: none;
@@ -169,7 +181,6 @@ nav a {
 
 h1 {
   font-size: 2ch;
-  margin-right: 3rem;
 }
 
 a {
@@ -181,21 +192,24 @@ a {
 .mode {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 footer {
   background-color: #d3d3ff;
-  padding: 40px 100% 40px;
+  color: #121413;
   width: 100%;
+  padding: 50px;
+  align-items: center;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
 }
 
 .outer h2 {
   color: #121413;
 }
 
-#mode {
+#mode-btn {
   width: 150px;
   padding: 5px;
   background-color: #c6bbee;
@@ -204,16 +218,22 @@ footer {
   border-style: solid;
 }
 
-.dark-mode h2 {
+.dark-mode h2,
+a,
+p {
   color: whitesmoke;
 }
 
-.dark-mode #mode {
+.dark-mode #mode-btn {
   color: whitesmoke;
   background-color: #6c458b;
   border-color: #524061;
 }
 
 .dark-mode .progress-bar {
-  color: #dedede;
+  color: #a81414;
+}
+
+a {
+  font-weight: bolder;
 }

@@ -23,8 +23,10 @@
           <li><a href="about.html">About</a></li>
         </ul>
       </nav>
-        <h2>Dark/light mode</h2>
-        <button onclick="myFunction()" id="mode">Change mode</button>
+      <div class="mode-change">
+        <h2 id="mode-text">Light mode</h2>
+        <button onclick="colorMode()" id="mode-btn">Change mode</button>
+    </div>
         <!-- button is in header so it has familair design, making the button easy to find for user  -->
     </header>
     <div class="outer">
@@ -46,7 +48,7 @@
         </section>
       </section>
       <section class="video-title">
-        <h2>Now Playing:<span id="video-name"></span>></span></h2>
+        <h2>Now Playing:<span id="video-name"></span></h2>
         <h2>Playtime:</span></h2>
       </section>
       <section class="video-controls">
@@ -69,7 +71,7 @@
         </div>
       </section>
     </div>
-    <footer>
+    <footer class="footer">
       <p>Icons are by: <a href="https://icons8.com">Icons8</a></p>
     </footer>
   </body>
