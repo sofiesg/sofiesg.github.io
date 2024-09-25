@@ -22,7 +22,7 @@ body {
   margin: auto;
   justify-content: center;
   align-items: center;
-  font-family: "Exo";
+  font-family: "Electrolize";
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
@@ -34,7 +34,6 @@ h1,
 h2,
 h3 {
   font-family: "Syncopate", "Lucida Grande", sans-serif;
-  font-family: ;
   font-weight: 700;
 }
 
@@ -192,6 +191,9 @@ h1 {
   font-size: 2ch;
   margin-right: 1rem;
 }
+h3 {
+  font-size: 1ch;
+}
 
 a {
   align-content: space-around;
@@ -205,21 +207,12 @@ a {
   align-items: center;
 }
 
-footer {
-  background-color: #d3d3ff;
-  color: #121413;
-  width: 100%;
-  padding: 50px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
 .outer h2 {
   color: #121413;
 }
 
 #mode-btn {
+  color: #121413;
   width: 150px;
   padding: 5px;
   background-color: #c6bbee;
@@ -246,4 +239,20 @@ p {
 
 a {
   font-weight: bolder;
+}
+
+.footer {
+  background-color: #d3d3ff;
+  color: #121413;
+  width: 100%;
+  padding: 50px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer p,
+a {
+  color: #121413;
 }
