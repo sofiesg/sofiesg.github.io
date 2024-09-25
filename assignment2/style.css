@@ -99,20 +99,20 @@ img {
   flex: 1;
 }
 
-.video-controls,
+.music-controls,
 .timeline {
   display: flex;
   gap: 1rem;
   flex-wrap: nowrap;
 }
 
-.video-controls button {
+.music-controls button {
   background-color: #dedede;
   border: none;
   border-radius: 8px;
 }
 
-.video-controls button img {
+.music-controls button img {
   padding: 10px;
 }
 
