@@ -4,12 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Study music</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Space+Grotesk&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
@@ -23,7 +21,7 @@
           <li><a href="about.html">About</a></li>
         </ul>
       </nav>
-      <div class="mode-change">
+      <div>
         <h2 id="mode-text">Light mode</h2>
         <button onclick="colorMode()" id="mode-btn">Change mode</button>
     </div>
@@ -31,11 +29,20 @@
     </header>
     <div class="outer">
       <section class="video-container">
-        <video id="my-video">
+        <img src="https://i.pinimg.com/originals/4a/65/ab/4a65abeead3a8d113bccfee5d5d239f4.gif" alt="">
+        <!-- <video id="my-video">
           <source src="stardust.mp4" type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
-        <section class="video-list">
+        </video> -->
+        <section class="playlist">
+            <button id="first-song">
+                <img src="" alt="">
+            </button>
+        </section>
+        <section>
+           <audio src="lofi-music.mp3" controls></audio>
+        </section>
+        <!-- <section class="video-list">
           <button id="first-video">
             <img id="first-video-img" src="jazz.jpg" alt="jazz" />
           </button>
@@ -46,7 +53,7 @@
             <img id="second-video-img" src="stardust.png" alt="stardust" />
           </button>
         </section>
-      </section>
+      </section> -->
       <section class="video-title">
         <h2>Now Playing:<span id="video-name"></span></h2>
         <h2>Playtime:</span></h2>

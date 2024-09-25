@@ -22,12 +22,24 @@ body {
   margin: auto;
   justify-content: center;
   align-items: center;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Exo";
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   color: #121413;
   font-size: 1.1rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Syncopate", "Lucida Grande", sans-serif;
+  font-family: ;
+  font-weight: 700;
+}
+
+.header a {
+  font-family: "Syncopate", "Lucida Grande", sans-serif;
 }
 
 .dark-mode {
@@ -167,20 +179,18 @@ nav {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 100%;
 }
 
-/* nav li {
-  margin-right: 100%;
-} */
-
 nav a {
+  display: flex;
   text-decoration: none;
   color: var(--text-color);
+  margin-right: 5rem;
 }
 
 h1 {
   font-size: 2ch;
+  margin-right: 1rem;
 }
 
 a {
