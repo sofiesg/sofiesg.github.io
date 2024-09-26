@@ -204,7 +204,7 @@ a {
   gap: 15px; /* Adds space between the playlist items */
 }
 
-#my-music {
+#visual {
   width: 70%;
   object-fit: cover;
 }
@@ -214,6 +214,7 @@ a {
   width: 150px;
   padding: 5px;
   background-color: #c6bbee;
+  border-style: solid;
   border-radius: 10px;
 }
 
