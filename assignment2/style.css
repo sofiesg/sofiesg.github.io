@@ -114,7 +114,7 @@ img {
 .progress-bar span {
   display: block;
   height: 100%;
-  background-color: coral;
+  background-color: purple;
   width: 0;
   transition: width 0.3s ease;
 }
@@ -204,7 +204,7 @@ a {
   gap: 15px; /* Adds space between the playlist items */
 }
 
-#visual {
+#study-gif {
   width: 70%;
   object-fit: cover;
 }
