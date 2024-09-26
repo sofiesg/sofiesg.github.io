@@ -80,22 +80,22 @@ img {
   border-radius: 50%;
 }
 
-.video-container {
+.music-container {
   display: flex;
   gap: 1rem;
   /* flex-wrap: wrap; */
 }
 
-.video-container > video {
+.music-container > audio {
   /* flex: 1; */
   width: 75%;
 }
 
-.video-list {
+.music-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  /* width: 200px; */
+  width: 200px;
   flex: 1;
 }
 
