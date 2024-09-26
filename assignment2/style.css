@@ -1,18 +1,3 @@
-/* body {
-  background-color: white;
-}
-
-.outer p,
-h1,
-h2,
-h3 {
-  color: #121413;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-} */
-
-/* vinrød: #591F1F */
-/* https://colorhunt.co/palette/1a120b3c2a21d5cea3e5e5cb */
-
 body {
   background-color: whitesmoke;
   display: flex;
@@ -41,22 +26,13 @@ h3 {
   font-family: "Syncopate", "Lucida Grande", sans-serif;
 }
 
-.dark-mode {
-  background-color: #282828;
-  color: whitesmoke;
-}
-
-.dark-mode header,
-footer {
-  background-color: #180227;
-}
-
-.dark-mode footer {
-  background-color: #180227;
+.mode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .outer {
-  border: 2px #e5e5cb68;
   min-height: 250px;
   width: 100%;
   padding: 10px;
@@ -74,10 +50,6 @@ img {
   margin: 10px auto;
   padding: 10px;
   /* line-height: 80px; */
-}
-
-.round {
-  border-radius: 50%;
 }
 
 .music-container {
@@ -201,40 +173,8 @@ a {
   font-weight: bold;
 }
 
-.mode {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .outer h2 {
   color: #121413;
-}
-
-#mode-btn {
-  color: #121413;
-  width: 150px;
-  padding: 5px;
-  background-color: #c6bbee;
-  border-color: #7765ba;
-  border-radius: 10px;
-  border-style: solid;
-}
-
-.dark-mode h2,
-a,
-p {
-  color: whitesmoke;
-}
-
-.dark-mode #mode-btn {
-  color: whitesmoke;
-  background-color: #6c458b;
-  border-color: #524061;
-}
-
-.dark-mode .progress-bar {
-  color: #a81414;
 }
 
 a {
@@ -255,4 +195,61 @@ a {
 .footer p,
 a {
   color: #121413;
+}
+
+.playlist {
+  display: flex;
+  flex-direction: column; /* Makes the playlist a vertical column */
+  justify-content: flex-start; /* Aligns playlist to start from the top */
+  gap: 15px; /* Adds space between the playlist items */
+}
+
+#my-music {
+  width: 70%;
+  object-fit: cover;
+}
+
+#mode-btn {
+  color: #121413;
+  width: 150px;
+  padding: 5px;
+  background-color: #c6bbee;
+  border-radius: 10px;
+}
+
+.dark-mode {
+  background-color: #282828;
+  color: whitesmoke;
+}
+
+.dark-mode h2 {
+  color: whitesmoke;
+}
+
+.dark-mode header,
+footer {
+  background-color: #180227;
+  color: whitesmoke;
+}
+
+.dark-mode .footer {
+  background-color: #180227;
+}
+
+.dark-mode .footer a {
+  color: whitesmoke;
+}
+
+.dark-mode .footer p {
+  color: whitesmoke;
+}
+
+.dark-mode #mode-btn {
+  color: whitesmoke;
+  background-color: #6c458b;
+  border-color: #524061;
+}
+
+.dark-mode .progress-bar {
+  color: #a81414;
 }
