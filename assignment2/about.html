@@ -7,7 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="reset.css" />
@@ -16,6 +20,19 @@
   </head>
   <body>
     <header class="header">
+      <h1>Study Music Playlist</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Playlist</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3 id="mode-text">Light mode</h3>
+        <button onclick="colorMode()" id="mode-btn">Change mode</button>
+      </div>
+      <!-- button is in header so it has familair design, making the button easy to find for user  -->
+    </header>
       <h1>Study music playlist</h1>
       <nav>
         <ul>
@@ -38,5 +55,9 @@
     <a href="https://www.youtube.com/watch?v=YTQAjKBNp8g">Lofi song</a>
 
     <a href="https://www.youtube.com/watch?v=ECrhLY1-MFo">Acoustic song</a>
+    <footer class="footer">
+      <p>Icons are by: <a href="https://icons8.com">Icons8</a></p>
+      <p>All music is royalty free</p>
+    </footer>
   </body>
 </html>
