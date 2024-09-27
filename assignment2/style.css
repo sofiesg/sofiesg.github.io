@@ -3,7 +3,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  /* text-align: center; */
   margin: auto;
   justify-content: center;
   align-items: center;
@@ -25,12 +24,8 @@ h3 {
 .header a {
   font-family: "Syncopate", "Lucida Grande", sans-serif;
 }
-
-.mode {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/* I want two back ups for the font in case the user's computer can't load the original 
+or the first backup font */
 
 .outer {
   min-height: 400px;
@@ -44,6 +39,7 @@ h3 {
 img {
   cursor: pointer;
 }
+/* To show that the images are buttons that can be clicked */
 
 .inner {
   margin: 10px auto;
@@ -59,7 +55,6 @@ img {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  /* width: 200px; */
   flex: 1;
 }
 
@@ -79,12 +74,6 @@ img {
 .music-controls button img {
   padding: 10px;
 }
-
-/* .timeline button {
-  padding: 0 10px;
-  background-color: #d5cea3;
-  border: none;
-} */
 
 .video-title {
   display: flex;
@@ -111,7 +100,7 @@ img {
 .progress-bar span {
   display: block;
   height: 100%;
-  background-color: purple;
+  background-color: #50599A;
   width: 0;
   transition: width 0.3s ease;
 }
@@ -138,6 +127,8 @@ li {
   flex-direction: column;
   text-align: center;
 }
+/* Wanted the button to have a title showing the chosen modes, 
+column + center makes the two elements look related*/
 
 nav {
   display: flex;
@@ -165,17 +156,12 @@ h3 {
 }
 
 a {
-  align-content: space-around;
-  color: black;
   font-weight: bold;
 }
+/* Some emphasis on the links */
 
 .outer h2 {
   color: #121413;
-}
-
-a {
-  font-weight: bolder;
 }
 
 .footer {
@@ -188,6 +174,7 @@ a {
   flex-direction: column;
   justify-content: center;
 }
+/* I want the content to be centered and the elements stack on top of each other*/
 
 .footer p,
 a {
@@ -196,14 +183,32 @@ a {
 
 .playlist {
   display: flex;
-  flex-direction: column; /* Makes the playlist a vertical column */
-  justify-content: flex-start; /* Aligns playlist to start from the top */
-  gap: 15px; /* Adds space between the playlist items */
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+/* Makes the playlist display as a column, with some space between 
+them so it doesn't get so squished and the items will appear separate */
+
+#song-name,
+#music-time {
+  margin-left: 1em;
 }
 
 #study-gif {
-  width: 70%;
-  object-fit: cover;
+  width: 80%;
+}
+/* I want the gif to be the main visual focus on the page*/
+
+.sources {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sources p {
+  line-height: 2rem;
+  margin-left: 8px;
 }
 
 #mode-btn {
@@ -214,6 +219,7 @@ a {
   border-style: solid;
   border-radius: 10px;
 }
+/* to make the button look like a button while following the color pallette */
 
 .dark-mode {
   background-color: #282828;
@@ -224,8 +230,7 @@ a {
   color: whitesmoke;
 }
 
-.dark-mode header,
-footer {
+.dark-mode header {
   background-color: #180227;
   color: whitesmoke;
 }
@@ -242,12 +247,16 @@ footer {
   color: whitesmoke;
 }
 
+.dark-mode .sources a {
+  color: whitesmoke;
+}
+
 .dark-mode #mode-btn {
   color: whitesmoke;
   background-color: #6c458b;
   border-color: #524061;
 }
 
-.dark-mode .progress-bar {
-  color: #a81414;
-}
+/* To make everything on the site to change color for a dark mode, 
+except the progress bar and the play and mute buttons. This is 
+because their colors worked for both*/
