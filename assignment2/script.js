@@ -43,16 +43,17 @@ function toggleSound() {
 myMusic.addEventListener("timeupdate", showProgress);
 
 const progressBar = document.querySelector("#progress-bar-fill");
-const videoTime = document.querySelector("#music-time");
+const musicTime = document.querySelector("#music-time");
 
 function showProgress() {
   const currentTime = myMusic.currentTime;
   if (myMusic.duration) {
-    videoTime.textContent = currentTime.toFixed(1);
+    musicTime.textContent = currentTime.toFixed(1);
     const progress = (currentTime / myMusic.duration) * 100;
     progressBar.style.width = progress + "%";
   }
 }
+// To show track progress, the bar will be "filled" with a different color.
 
 const audio = [
   {
@@ -90,15 +91,17 @@ thirdAudioBtn.addEventListener("click", function () {
 
 const audioName = document.querySelector("#song-name");
 
+// To be able to play the audio file the user chooses
+
 function chooseAudio(no) {
-  myMusic.src = audio[no].src; // Corrected from myMusic.scr to myMusic.src
+  myMusic.src = audio[no].src;
   audioName.textContent = audio[no].name;
   myMusic.load();
   myMusic.play();
 }
 
 
-// Dark mode toggle function
+// For the dark mode button
 function colorMode() {
   var element = document.body;
   element.classList.toggle("dark-mode");

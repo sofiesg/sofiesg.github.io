@@ -74,6 +74,7 @@ img {
 .music-controls button img {
   padding: 10px;
 }
+/* To give the image some room, prettier when the border isn't at the very edges of the image */
 
 .video-title {
   display: flex;
@@ -103,7 +104,9 @@ img {
   background-color: #50599A;
   width: 0;
   transition: width 0.3s ease;
+  border-radius: 5px;
 }
+/* color to the progress bar etc as the song plays */
 
 header {
   display: flex;
