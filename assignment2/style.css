@@ -79,7 +79,7 @@ img {
 }
 
 .music-controls button {
-  background-color: #dedede;
+  background-color: #ccccf3;
   border: none;
   border-radius: 8px;
 }
@@ -88,11 +88,11 @@ img {
   padding: 10px;
 }
 
-.timeline button {
+/* .timeline button {
   padding: 0 10px;
   background-color: #d5cea3;
   border: none;
-}
+} */
 
 .video-title {
   display: flex;
@@ -104,11 +104,11 @@ img {
 }
 
 .progress-bar {
-  width: 100%;
-  height: 10px;
-  background-color: #66656368;
+  width: 90%;
+  height: 20px;
+  background-color: #d3d3ff;
   margin-top: 10px;
-  overflow: hidden;
+  border-radius: 5px;
 }
 
 .progress-bar span {

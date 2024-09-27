@@ -11,10 +11,12 @@ const playImg = document.querySelector("#play-img");
 function togglePlay() {
   if (myMusic.paused || myMusic.ended) {
     myMusic.play();
-    playImg.src = "https://img.icons8.com/ios-glyphs/30/pause--v2.png"; // Corrected for playing state
+    playButton.style.backgroundColor = "#BDAAE6";
+    playImg.src = "https://img.icons8.com/ios-glyphs/30/pause--v2.png";
   } else {
     myMusic.pause();
-    playImg.src = "https://img.icons8.com/ios-glyphs/30/play--v1.png"; // Corrected for paused state
+    playButton.style.backgroundColor = "#ccccf3";
+    playImg.src = "https://img.icons8.com/ios-glyphs/30/play--v1.png";
   }
 }
 
@@ -28,14 +30,15 @@ const muteImg = document.querySelector("#mute-img");
 function toggleSound() {
   if (myMusic.muted) {
     myMusic.muted = false;
-    muteBtn.style.backgroundColor = "#d5cea3";
-    muteImg.src = "https://img.icons8.com/ios-glyphs/30/no-audio--v1.png";
+    muteBtn.style.backgroundColor = "#ccccf3";
+    muteImg.src = "https://img.icons8.com/ios-glyphs/30/high-volume--v2.png";
   } else {
     myMusic.muted = true;
-    muteBtn.style.backgroundColor = "#8c886f";
-    muteImg.src = "https://img.icons8.com/ios-glyphs/30/high-volume--v2.png";
+    muteBtn.style.backgroundColor = "#BDAAE6";
+    muteImg.src = "https://img.icons8.com/ios-glyphs/30/no-audio--v1.png";
   }
 }
+// The mute and play buttons have a slight color change to further communicate the change.
 
 myMusic.addEventListener("timeupdate", showProgress);
 
