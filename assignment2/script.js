@@ -54,6 +54,50 @@ function showProgress() {
   }
 }
 
+const audio = [
+  {
+    name: "lofi",
+    src: "lofi-music.mp3",
+  },
+  {
+    name: "jazz",
+    src: "jazz-music.mp3",
+  },
+  {
+    name: "acoustic",
+    src: "acoustic-music.mp3",
+  },
+];
+
+const firstAudioBtn = document.querySelector("#first-song-btn");
+console.log(firstAudioBtn);
+
+const secondAudioBtn = document.querySelector("#second-song-btn");
+console.log(secondAudioBtn);
+
+const thirdAudioBtn = document.querySelector("#third-song-btn");
+console.log(thirdAudioBtn);
+
+firstAudioBtn.addEventListener("click", function () {
+  chooseAudio(0);
+});
+secondAudioBtn.addEventListener("click", function () {
+  chooseAudio(1);
+});
+thirdAudioBtn.addEventListener("click", function () {
+  chooseAudio(2);
+});
+
+const audioName = document.querySelector("#song-name");
+
+function chooseAudio(no) {
+  myMusic.src = audio[no].src; // Corrected from myMusic.scr to myMusic.src
+  audioName.textContent = audio[no].name;
+  myMusic.load();
+  myMusic.play();
+}
+
+
 // Dark mode toggle function
 function colorMode() {
   var element = document.body;
