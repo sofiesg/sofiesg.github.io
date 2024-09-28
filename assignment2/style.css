@@ -43,8 +43,14 @@ img {
 
 .music-container {
   display: flex;
+  flex-direction: row;
   margin-bottom: 1rem;
 }
+/* flex-direction: row; so the playlisst/tracklist is on the right. This is common for many 
+sites, like youtube that is often used for study music. In my interaction design program, it's 
+drilled into us to use familiar design so users won't have to relearn the layout and it's 
+functions. I think it's especially important for a study playlsit that should need as little 
+attention as possible. */
 
 .song-list {
   display: flex;
@@ -178,10 +184,13 @@ a {
   gap: 1rem;
 }
 /* Makes the playlist display as a column, with some space between 
-them so it doesn't get so squished and the items will appear separate */
+them so it doesn't get so squished and the items will appear separate.*/
 
-.playlist p {
+.playlist button {
   background: none;
+  border: none;
+  color: #121413;
+  text-decoration: underline;
 }
 
 #song-name,
@@ -245,6 +254,10 @@ them so it doesn't get so squished and the items will appear separate */
   color: whitesmoke;
 }
 
+.dark-mode .playlist p {
+  color: whitesmoke;
+}
+
 .dark-mode #mode-btn {
   color: whitesmoke;
   background-color: #6c458b;
@@ -254,3 +267,6 @@ them so it doesn't get so squished and the items will appear separate */
 /* To make everything on the site to change color for a dark mode, 
 except the progress bar and the play and mute buttons. This is 
 because their colors worked for both*/
+
+/* I tried to select more elements together to shorten the code, 
+but it would stop working */
