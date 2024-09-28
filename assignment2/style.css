@@ -41,11 +41,6 @@ img {
 }
 /* To show that the images are buttons that can be clicked */
 
-.inner {
-  margin: 10px auto;
-  padding: 10px;
-}
-
 .music-container {
   display: flex;
   margin-bottom: 1rem;
@@ -58,8 +53,7 @@ img {
   flex: 1;
 }
 
-.music-controls,
-.timeline {
+.music-controls {
   display: flex;
   gap: 1rem;
   flex-wrap: nowrap;
@@ -76,19 +70,11 @@ img {
 }
 /* To give the image some room, prettier when the border isn't at the very edges of the image */
 
-.video-title {
-  display: flex;
-  justify-content: space-between;
-}
-
-.video-title h1 {
-  font-size: 1.2rem;
-}
-
 .song-title {
   display: flex;
   justify-content: space-between;
 }
+/* I want the song title and the playtime to be on opposite ends */
 
 .progress-bar {
   width: 90%;
@@ -97,6 +83,7 @@ img {
   margin-top: 10px;
   border-radius: 5px;
 }
+/* I wanted the progressbar to  */
 
 .progress-bar span {
   display: block;
@@ -193,6 +180,10 @@ a {
 /* Makes the playlist display as a column, with some space between 
 them so it doesn't get so squished and the items will appear separate */
 
+.playlist p {
+  background: none;
+}
+
 #song-name,
 #music-time {
   margin-left: 1em;
@@ -250,7 +241,7 @@ them so it doesn't get so squished and the items will appear separate */
   color: whitesmoke;
 }
 
-.dark-mode .sources a {
+.dark-mode .outer a{
   color: whitesmoke;
 }
 
