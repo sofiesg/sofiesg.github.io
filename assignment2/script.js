@@ -57,15 +57,15 @@ function showProgress() {
 
 const audio = [
   {
-    name: "lofi",
+    name: "Lofi",
     src: "lofi-music.mp3",
   },
   {
-    name: "jazz",
+    name: "Jazz",
     src: "jazz-music.mp3",
   },
   {
-    name: "acoustic",
+    name: "Acoustic",
     src: "acoustic-music.mp3",
   },
 ];
