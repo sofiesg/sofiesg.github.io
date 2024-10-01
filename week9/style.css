@@ -1,67 +1,67 @@
 /* https://colorhunt.co/palette/1a120b3c2a21d5cea3e5e5cb */
 
 body {
-    background-color: #1a120b;
-    display: flex;
-    text-align: center;
-    margin: auto;
-    max-width: 1000px;
-    justify-content: center;
-    align-items: center;
-    font-family: "Space Grotesk", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    color: #e5e5cb;
-    /* color: #3c2a21; */
-    font-size: 1.1rem;
-    gap: 1.5rem;
-  }
-  
-  .outer {
-    border: 2px dashed #e5e5cb7a;
-    width: 400px;
-    min-height: 200px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    opacity: 1;
-    /* background-color: cornsilk; */
-    transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.5s ease;
-  }
+  background-color: #1a120b;
+  display: flex;
+  text-align: center;
+  margin: auto;
+  max-width: 1000px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #e5e5cb;
+  /* color: #3c2a21; */
+  font-size: 1.1rem;
+  gap: 1.5rem;
+}
 
-  button {
-    padding: 10px 20px;
-    font-size: 1.3rem;
-    border-radius: 12px;
-    /* border-width: 0; */
-    cursor: pointer;
-    /* background-color: aquamarine; */
-    background-color: transparent;
-    border-color: coral;
-    color: cornsilk;
-    transition: border-color 0.7 ease scale 0.7s ease rotate 0.5s ease;
-    /* transition: background-color 0.5s ease scale 0.5 linear; */
-  }
+.outer {
+  border: 2px dashed #e5e5cb7a;
+  width: 400px;
+  min-height: 200px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  opacity: 1;
+  /* background-color: cornsilk; */
+  transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.5s ease;
+}
 
-  button:hover {
-    /* background-color: rgb(67, 197, 154); */
-    scale: 0.9;
-    border-color: rgb(179, 66, 25);
-    rotate: 10deg;
-  }
+button {
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  border-radius: 12px;
+  /* border-width: 0; */
+  cursor: pointer;
+  /* background-color: aquamarine; */
+  background-color: transparent;
+  border-color: coral;
+  color: cornsilk;
+  transition: border-color 0.7 ease scale 0.7s ease rotate 0.5s ease;
+  /* transition: background-color 0.5s ease scale 0.5 linear; */
+}
+
+button:hover {
+  /* background-color: rgb(67, 197, 154); */
+  scale: 0.9;
+  border-color: rgb(179, 66, 25);
+  rotate: 10deg;
+}
 
 .duck-skin {
-    cursor: pointer;
-    transition: fill 0.4s ease-in-out;
+  cursor: pointer;
+  transition: fill 0.4s ease-in-out;
 }
 
 .duck-skin:hover {
-    fill: blue;
-    /* scale: 0.9; */
+  fill: blue;
+  /* scale: 0.9; */
 }
 
 /* .duck-icon {
@@ -69,5 +69,56 @@ body {
 } */
 
 .duck-icon:hover {
-    scale: 0.9;
+  scale: 0.9;
+}
+
+#box {
+  min-width: 120px;
+  min-height: 120px;
+  background-color: purple;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* animation-name: color-wheel; */
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes color-wheel {
+  0% {
+    background-color: purple;
+  }
+  20% {
+    background-color: crimson;
+  }
+  40% {
+    background-color: limegreen;
+  }
+  60% {
+    background-color: blue;
+  }
+  80% {
+    background-color: yellow;
+  }
+}
+
+@keyframes border-wheel {
+  0% {
+    border-color: purple;
+  }
+  20% {
+    border-color: crimson;
+  }
+  40% {
+    border-color: limegreen;
+  }
+  60% {
+    border-color: blue;
+  }
+  80% {
+    border-color: yellow;
+  }
 }
