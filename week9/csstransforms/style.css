@@ -32,42 +32,40 @@ body {
     /* background-color: cornsilk; */
     transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.5s ease;
   }
-
+  
   button {
-    padding: 10px 20px;
-    font-size: 1.3rem;
+    padding: 20px 10px;
     border-radius: 12px;
-    /* border-width: 0; */
     cursor: pointer;
-    /* background-color: aquamarine; */
+    color: #e5e5cb;
     background-color: transparent;
-    border-color: coral;
-    color: cornsilk;
-    transition: border-color 0.7 ease scale 0.7s ease rotate 0.5s ease;
-    /* transition: background-color 0.5s ease scale 0.5 linear; */
+    border: 2px solid cornsilk;
   }
-
+  
   button:hover {
-    /* background-color: rgb(67, 197, 154); */
-    scale: 0.9;
-    border-color: rgb(179, 66, 25);
-    rotate: 10deg;
+    /* background-color: coral; */
+    /* transition: background-color 0.5s ease;  */
+    border-color: coral;
+  
+    transition: border-color 0.5s ease;
   }
-
-.duck-skin {
-    cursor: pointer;
-    transition: fill 0.4s ease-in-out;
-}
-
-.duck-skin:hover {
-    fill: blue;
-    /* scale: 0.9; */
-}
-
-/* .duck-icon {
-    transition: ;
-} */
-
-.duck-icon:hover {
-    scale: 0.9;
-}
+  
+  .ball {
+    min-width: 50px;
+    min-height: 50px;
+    /* border-radius: 50%; */
+    background-color: purple;
+    transition: transform 0.7s ease-out;
+    /* transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); */
+    /* transition: translate 0.8s ease-out rotate 0.8s ease scale 0.8s ease; */
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .moveright {
+    translate: 50px 0px;
+  }
