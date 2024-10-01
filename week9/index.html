@@ -15,8 +15,17 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <div id="side-drawer">
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </div>
     <div class="outer">
-      <button>click me</button>
+      <button id="drawer-button">click me</button>
     </div>
     <div class="outer">
       <svg
@@ -42,8 +51,14 @@
         />
       </svg>
     </div>
-    <div class="outer">
+    <!-- <div class="outer">
       <div id="box">boxing day sale!</div>
+    </div> -->
+    <div class="outer">
+      <div class="spinner"></div>
+    </div>
+    <div class="outer">
+      <img src="heart.svg" alt="heart" width="50" height="50" id="heart-icon" />
     </div>
   </body>
 </html>
