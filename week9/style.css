@@ -32,3 +32,12 @@ body {
     /* background-color: cornsilk; */
     transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.5s ease;
   }
+
+  button {
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    border-radius: 12px;
+    border-width: 0;
+    cursor: pointer;
+    background-color: aquamarine;
+  }
