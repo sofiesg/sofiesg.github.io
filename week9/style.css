@@ -186,12 +186,13 @@ button:hover {
 #side-drawer {
   position: fixed;
   top: 0;
-  left: 300px;
-  /* left: -200px; */
+  left: -200px;
   width: 200px;
   min-height: 100vh;
+  /* to only occupy the entire height */
   /* transition: transform 0.5s ease-in-out; */
   transition: translate 0.5s ease-in-out;
+  /* makes it fell smoother, without it feels jagged. with it feels more like sliding in/out */
   display: flex;
   flex-direction: column;
   justify-content: center;
