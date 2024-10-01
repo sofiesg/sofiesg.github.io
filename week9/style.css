@@ -75,13 +75,15 @@ button:hover {
 #box {
   min-width: 120px;
   min-height: 120px;
-  background-color: purple;
+  /* background-color: rgb(201, 132, 214); */
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  border: 4px dashed purple;
   /* animation-name: color-wheel; */
+  animation-name: border-wheel;
   animation-duration: 6s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
