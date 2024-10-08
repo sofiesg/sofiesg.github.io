@@ -1,8 +1,8 @@
 const slides = document.querySelectorAll(".slides");
 console.log(slides);
 
-const slidesContainer = document.querySelector("#slides-container");
-console.log(slidesContainer);
+// const slidesContainer = document.querySelector("#slides-container");
+// console.log(slidesContainer);
 
 let slideIndex = 0;
 let distance = 0;

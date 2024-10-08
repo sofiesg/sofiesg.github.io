@@ -106,6 +106,39 @@ function getWVScroll() {
 
 //-----------------------------------------------------------
 
+// let us work on the drag drop idea
+
+const purpleBox = document.querySelector("#purple-box");
+console.log(purpleBox);
+const dropBox = document.querySelector("#drop-box");
+console.log(dropBox);
+
+let draggedElement = null;
+purpleBox.addEventListener("dragstart", startDrag);
+function startDrag() {
+  draggedElement = purpleBox;
+}
+
+dropBox.addEventListener("dragover", endDrag);
+function endDrag() {
+  console.log("stop dragging and drop now");
+  event.preventDefault();
+}
+dropBox.addEventListener("drop", handleDrop);
+function handleDrop() {
+  if (draggedElement) {
+    let color = window
+      .getComputedStyle(draggedElement)
+      .getPropertyValue("background-color");
+    console.log(color);
+    dropBox.style.backgroundColor = color;
+    dropBox.textContent = "content is dropped";
+    draggedElement = null;
+  }
+}
+
+//-----------------------------------------------------------
+
 // const hoverButton = document.querySelector("#hover-button");
 // console.log(hoverButton);
 

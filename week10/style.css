@@ -149,3 +149,13 @@ footer {
   bottom: 20px;
   right: 20px;
 }
+
+/* styling for the drag drop example */
+#purple-box {
+  background-color: purple;
+  cursor: pointer;
+}
+
+#drop-box {
+  cursor: pointer;
+}
