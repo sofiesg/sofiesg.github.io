@@ -1,11 +1,66 @@
 body {
-  background-color: antiquewhite;
+  background-color: rgb(26, 14, 10);
   color: black;
   display: flex;
   flex-direction: column;
 }
 
-.outer {
-  margin: 1rem;
-  border: solid 3px black;
+#slides-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: auto;
+}
+.slides {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}
+
+img {
+  height: 300px;
+  width: 240px;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+.info {
+  height: 300px;
+  width: 240px;
+  border-radius: 10px;
+  background-color: wheat;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -100%; /* Initially position it below the image */
+  left: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+/* USing position: absolute so the info card stays hidden behind the image card. I'm also using align-items: center;
+  justify-content: center; so the text will be centered on the card */
+
+.info p {
+  font-size: 18px;
+  line-height: 2em;
+}
+
+#flip {
+  position: relative;
+  width: 240px;
+  height: 300px;
+  overflow: hidden;
+}
+
+#flip:hover .info {
+  opacity: 1;
+  transform: translateY(-100%); /* Move it up to become visible */
 }
