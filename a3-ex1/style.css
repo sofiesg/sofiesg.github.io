@@ -1,0 +1,33 @@
+@media (min-width: 992px) {
+  html.w-mod-js:not(.w-mod-ix)
+    [data-w-id="a2ae6f2c-032b-3531-64c5-c60ea63a0f67"] {
+    opacity: 0;
+  }
+  html.w-mod-js:not(.w-mod-ix)
+    [data-w-id="bf7eefea-572f-f198-0608-5e60cc02e4ab"] {
+    opacity: 1;
+  }
+  html.w-mod-js:not(.w-mod-ix)
+    [data-w-id="d9e6e246-6e6e-1d12-7b53-fca01cb89795"] {
+    opacity: 1;
+  }
+  html.w-mod-js:not(.w-mod-ix)
+    [data-w-id="282ca9da-fb20-7eea-2ca1-04066128b87f"] {
+    opacity: 1;
+  }
+  html.w-mod-js:not(.w-mod-ix)
+    [data-w-id="282ca9da-fb20-7eea-2ca1-04066128b882"] {
+    opacity: 1;
+  }
+  html.w-mod-js:not(.w-mod-ix)
+    [data-w-id="282ca9da-fb20-7eea-2ca1-04066128b880"] {
+    opacity: 0;
+  }
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 1400px) {
+  body {
+    font-size: 15px;
+  }
+}

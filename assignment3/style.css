@@ -1,0 +1,11 @@
+body {
+  background-color: antiquewhite;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.outer {
+  margin: 1rem;
+  border: solid 3px black;
+}
