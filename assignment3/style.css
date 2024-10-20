@@ -4,13 +4,22 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Simonetta", serif;
-  transition: background-image 1s ease;
 }
 
 header {
   background-color: blanchedalmond;
+  width: 100%;
   padding: 20px;
   color: black;
+  position: fixed;
+}
+
+footer {
+  background-color: blanchedalmond;
+  width: 100%;
+  padding: 20px;
+  color: black;
+  position: fixed;
 }
 
 #slides-container {
@@ -85,4 +94,9 @@ button {
   position: fixed;
   bottom: 20px;
   right: 20px;
+}
+
+.munch {
+  background-image: url(munch.jpg);
+  transition: background-image 1s ease;
 }

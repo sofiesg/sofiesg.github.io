@@ -36,14 +36,33 @@ function gotoNext() {
   window.scrollTo({ left: distance, behavior: "smooth" });
 }
 
-const coverDiv = document.querySelector("#cover");
+const cardMunch = document.querySelector("#cover");
 
-coverDiv.addEventListener("mouseover", function () {
+cardMunch.addEventListener("mouseover", function () {
   document.body.style.backgroundImage = "url('munch.jpg')";
   document.body.style.backgroundSize = "cover";
   document.body.style.backgroundPosition = "center";
 });
 
-coverDiv.addEventListener("mouseout", function () {
-  document.body.style.backgroundImage = ""; // Reverts back to the original background
+cardMunch.addEventListener("mouseout", function () {
+  document.body.style.backgroundImage = "none"; // Reverts back to the original background
 });
+
+// element.onmouseover=change();
+// element.onmouseout=change();
+// function change(){
+// element.classList.toggle("hover");
+// }
+
+// ---------------------------------------
+
+// function backgroundMode() {
+//     var element = document.body;
+//     element.classList.hover("artist-mode");
+//     var x = document.getElementById("cover");
+//     if (x.innerHTML === "Light mode") {
+//       x.innerHTML = "Dark mode";
+//     } else {
+//       x.innerHTML = "Light mode";
+//     }
+//   }
