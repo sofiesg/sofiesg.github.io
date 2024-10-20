@@ -1,38 +1,49 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll(".slides");
-  let currentSlide = 0;
+const slides = document.querySelectorAll(".slides");
+console.log(slides);
 
-  function showSlide(index) {
-    if (index >= slides.length) {
-      currentSlide = 0;
-    } else if (index < 0) {
-      currentSlide = slides.length - 1;
-    } else {
-      currentSlide = index;
-    }
+// const slidesContainer = document.querySelector("#slides-container");
+// console.log(slidesContainer);
 
-    // Position slides vertically for scrolling behavior
-    slides.forEach((slide, idx) => {
-      slide.style.transform = `translateY(${(idx - currentSlide) * 100}vh)`;
-    });
+let slideIndex = 0;
+let distance = 0;
+
+// add lcick events to navigate buttons
+const prevButton = document.querySelector("#prev-button");
+console.log(prevButton);
+prevButton.addEventListener("click", gotoPrevious);
+function gotoPrevious() {
+  if (slideIndex > 0) {
+    slideIndex--;
+  } else {
+    slideIndex = slides.length - 1;
   }
+  distance = slides[slideIndex].offsetLeft;
+  console.log(distance);
+  window.scrollTo({ left: distance, behavior: "smooth" });
+}
 
-  // Listen for scroll events
-  let scrollTimeout;
-  window.addEventListener("wheel", (event) => {
-    clearTimeout(scrollTimeout);
+const nextButton = document.querySelector("#next-button");
+console.log(nextButton);
+nextButton.addEventListener("click", gotoNext);
+function gotoNext() {
+  if (slideIndex < slides.length - 1) {
+    slideIndex++;
+  } else {
+    slideIndex = 0;
+  }
+  distance = slides[slideIndex].offsetLeft;
+  console.log(distance);
+  window.scrollTo({ left: distance, behavior: "smooth" });
+}
 
-    scrollTimeout = setTimeout(() => {
-      if (event.deltaY > 0) {
-        // Scroll down
-        showSlide(currentSlide + 1);
-      } else {
-        // Scroll up
-        showSlide(currentSlide - 1);
-      }
-    }, 100);
-  });
+const coverDiv = document.querySelector("#cover");
 
-  // Initialize by showing the first slide
-  showSlide(currentSlide);
+coverDiv.addEventListener("mouseover", function () {
+  document.body.style.backgroundImage = "url('munch.jpg')";
+  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundPosition = "center";
+});
+
+coverDiv.addEventListener("mouseout", function () {
+  document.body.style.backgroundImage = ""; // Reverts back to the original background
 });

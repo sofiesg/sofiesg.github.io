@@ -3,6 +3,14 @@ body {
   color: black;
   display: flex;
   flex-direction: column;
+  font-family: "Simonetta", serif;
+  transition: background-image 1s ease;
+}
+
+header {
+  background-color: blanchedalmond;
+  padding: 20px;
+  color: black;
 }
 
 #slides-container {
@@ -12,6 +20,7 @@ body {
   gap: 10px;
   margin: auto;
 }
+
 .slides {
   height: 100vh;
   width: 100vw;
