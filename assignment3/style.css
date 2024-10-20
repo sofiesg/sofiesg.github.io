@@ -12,7 +12,6 @@ body {
   gap: 10px;
   margin: auto;
 }
-
 .slides {
   height: 100vh;
   width: 100vw;
@@ -26,6 +25,7 @@ img {
   height: 300px;
   width: 240px;
   border-radius: 10px;
+  object-fit: cover;
 }
 
 .info {
@@ -39,30 +39,41 @@ img {
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: 0; /* Start position is hidden behind the image */
-  transform: translateX(-240px); /* Hide it to the left */
+  bottom: -100%;
+  left: 0;
   opacity: 0;
-  transition: transform 0.5s ease;
+  transition: transform 1s ease, opacity 0.6s ease;
 }
-/* USing position: absolute so the info card stays hidden behind the image card. I'm also using align-items: center;
+/* Using position: absolute so the info card stays hidden behind the image card. I'm also using align-items: center;
   justify-content: center; so the text will be centered on the card */
+/* bottom: -100% so it's hidden below the image */
 
 .info p {
   font-size: 18px;
   line-height: 2em;
 }
 
-#flip {
+#cover {
   position: relative;
   width: 240px;
   height: 300px;
   overflow: hidden;
 }
 
-#flip:hover body {
-  background: url(munch.jpg);
+#cover:hover .info {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+/* transform: translateY(-100%) so it moves up over the image */
+
+button {
+  padding: 10px;
+  color: black;
+  background-color: antiquewhite;
 }
 
-#flip:hover .info {
-  transform: translateX(240px); /* Slide out to the right */
+#navigation {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
