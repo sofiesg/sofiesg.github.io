@@ -4,6 +4,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Simonetta", serif;
+  height: 100%;
 }
 
 header {
@@ -71,11 +72,15 @@ img {
   line-height: 2em;
 }
 
-#cover {
+#cover,
+#flip {
   position: relative;
   width: 240px;
   height: 300px;
   overflow: hidden;
+  padding: none;
+  border: none;
+  border-radius: 10px;
 }
 
 #cover:hover .info {
@@ -84,7 +89,7 @@ img {
 }
 /* transform: translateY(-100%) so it moves up over the image */
 
-button {
+#navigation button {
   padding: 10px;
   color: black;
   background-color: antiquewhite;
@@ -96,7 +101,7 @@ button {
   right: 20px;
 }
 
-.munch {
+/* .munch {
   background-image: url(munch.jpg);
   transition: background-image 1s ease;
-}
+} */

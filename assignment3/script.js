@@ -36,33 +36,17 @@ function gotoNext() {
   window.scrollTo({ left: distance, behavior: "smooth" });
 }
 
-const cardMunch = document.querySelector("#cover");
+const vigelandCard = document.querySelector("#flip");
 
-cardMunch.addEventListener("mouseover", function () {
-  document.body.style.backgroundImage = "url('munch.jpg')";
+vigelandCard.addEventListener("mouseover", function () {
+  document.body.style.backgroundImage =
+    "url('https://vigeland.museum.no/imager/bilder/Gustav-Vigeland/589/standard_gustav-vigeland_d6249d1aefa7d35946ba52fa46420a7b.jpg')";
   document.body.style.backgroundSize = "cover";
   document.body.style.backgroundPosition = "center";
 });
+//makes the body background change to the artist of the current card when hovering.
 
-cardMunch.addEventListener("mouseout", function () {
-  document.body.style.backgroundImage = "none"; // Reverts back to the original background
+vigelandCard.addEventListener("mouseout", function () {
+  document.body.style.backgroundImage = "";
 });
-
-// element.onmouseover=change();
-// element.onmouseout=change();
-// function change(){
-// element.classList.toggle("hover");
-// }
-
-// ---------------------------------------
-
-// function backgroundMode() {
-//     var element = document.body;
-//     element.classList.hover("artist-mode");
-//     var x = document.getElementById("cover");
-//     if (x.innerHTML === "Light mode") {
-//       x.innerHTML = "Dark mode";
-//     } else {
-//       x.innerHTML = "Light mode";
-//     }
-//   }
+// Returns the body background to it's normal state when the user is no longer hovering the card
