@@ -3,11 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slides</title>
+    <title>Art gallery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="reset.css" />
@@ -16,30 +20,37 @@
   </head>
   <body>
     <div id="slides-container">
+      <!-- This website is a mini art gallery of classic norwegian art pices.  -->
       <!-- <header>
         <h1>My favorite paintings</h1>
       </header> -->
-      <!-- Slide 1 -->
+      <!-- First slide -->
       <div class="slides">
         <div class="glide-card">
+          <h2>Psychological struggles</h2>
           <div class="glide-card-inner">
             <div class="glide-card-front">
               <img
                 src="https://www.nasjonalmuseet.no/globalassets/bilder/edvard-munch/ng.m.009392.jpg?scale=containerxl"
-                alt="Painting of a man screaming in horror on a bridge"
+                alt="Painting of a man standing ona  bridge screaming in horror"
               />
             </div>
             <div class="glide-card-back info">
-              <h1>The Scream</h1>
+              <h3>The Scream</h3>
               <p>Edvard Munch</p>
               <p>1887</p>
+              <a
+                href="https://www.nasjonalmuseet.no/en/stories/explore-the-collection/edvard-munch-and-the-scream-in-the-national-museum/"
+                >Read more about this painting</a
+              >
             </div>
           </div>
         </div>
       </div>
-      <!-- Slide 2 -->
+      <!-- Second slide -->
       <div class="slides">
         <div class="flip-card">
+          <h2>Societal problems</h2>
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <img
@@ -48,16 +59,17 @@
               />
             </div>
             <div class="flip-card-back info">
-              <h1>Albertine</h1>
+              <h3>Albertine</h3>
               <p>by Christian Krohg</p>
               <p>1887</p>
             </div>
           </div>
         </div>
       </div>
-      <!-- Slide 3 -->
+      <!-- Third slide -->
       <div class="slides">
         <div class="open-card">
+          <h2>Existensial or spiritual battles</h2>
           <div class="open-card-inner">
             <div class="open-card-front">
               <img
@@ -73,9 +85,10 @@
           </div>
         </div>
       </div>
-      <!-- Slide 4 -->
+      <!-- Fourth slide -->
       <div class="slides">
         <div class="cover-card">
+          <h2>The national romatic era</h2>
           <div class="cover-card-inner">
             <div class="cover-card-front">
               <img
@@ -92,10 +105,20 @@
         </div>
       </div>
     </div>
-    <!-- Navigation Buttons -->
+    <!-- Navigation for the slides -->
     <div id="navigation">
-      <button id="prev-button">Previous slide</button>
-      <button id="next-button">Next slide</button>
+      <button id="prev-button">
+        <img
+          src="https://img.icons8.com/?size=48&id=88110&format=png"
+          alt="Previous slide"
+        />
+      </button>
+      <button id="next-button">
+        <img
+          src="https://img.icons8.com/?size=48&id=85789&format=png"
+          alt="Next slide"
+        />
+      </button>
     </div>
   </body>
 </html>

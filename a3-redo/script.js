@@ -52,16 +52,40 @@ munchDiv.addEventListener("mouseout", () => {
 
 //---------------------------------------------------------
 //Changes the background to a portrait of Christian Krohg when hovering over his painting card
+
 const krohgDiv = document.querySelector(".flip-card-inner");
 console.log(krohgDiv);
 
-if (krohgDiv) {
-  krohgDiv.addEventListener("mouseover", () => {
-    console.log("Hovering over Krohg card");
-    document.body.classList.add("change-background-krohg");
-  });
+krohgDiv.addEventListener("mouseover", () => {
+  document.body.classList.add("change-background-krohg");
+});
 
-  krohgDiv.addEventListener("mouseout", () => {
-    document.body.classList.remove("change-background-krohg");
-  });
-}
+krohgDiv.addEventListener("mouseout", () => {
+  document.body.classList.remove("change-background-krohg");
+});
+
+// -----------------------------------------------------------
+//Changes the background to a photo of Gustav Vigeland when hovering over his statue card
+const vigelandDiv = document.querySelector(".open-card-inner");
+console.log(krohgDiv);
+
+vigelandDiv.addEventListener("mouseover", () => {
+  document.body.classList.add("change-background-vigeland");
+});
+
+vigelandDiv.addEventListener("mouseout", () => {
+  document.body.classList.remove("change-background-vigeland");
+});
+
+//----------------------------------------------------
+//Changes the background to a photograph of Adolph Tideman & Hans Gude when hovering over their painting card
+const tidemanDiv = document.querySelector(".cover-card-inner");
+console.log(krohgDiv);
+
+tidemanDiv.addEventListener("mouseover", () => {
+  document.body.classList.add("change-background-tideman");
+});
+
+tidemanDiv.addEventListener("mouseout", () => {
+  document.body.classList.remove("change-background-tideman");
+});

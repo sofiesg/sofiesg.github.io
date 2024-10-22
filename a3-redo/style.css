@@ -1,65 +1,65 @@
-/* https://colorhunt.co/palette/1a120b3c2a21d5cea3e5e5cb */
-
 body {
-  background-color: #1a120b;
+  background-color: #1a0f0c;
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: auto;
+  margin: 0;
   max-width: 1000px;
   justify-content: space-between;
   align-items: center;
   font-family: "Simonetta", serif;
-  font-size: 1ch;
+  font-size: 20px;
   font-weight: 400;
   font-style: normal;
-  color: #e5e5cb;
+  color: #efeade;
   gap: 20px;
+  transition: background-image 5s ease;
 }
 
-.outer {
-  border: 2px dashed #e5e5cb7a;
-  width: 400px;
-  min-height: 200px;
-  padding: 10px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+h2 {
+  font-family: "dm-serif-display-regular";
+  font-size: 40px;
+  font-weight: bold;
+  margin: 2rem;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #1a0f0c;
 }
+
+a {
+  color: black;
+  font-size: 18px;
+  font-style: italic;
+  max-width: 150px;
+  line-height: normal;
+  margin-top: 50px;
+}
+
+a:hover {
+  color: rgb(137, 34, 14);
+}
+
+/* I have added a stroke to the text so it won't be as hard to read when the background changes to 
+something with a lower color contrast */
+/* I have chosen these fonts due to my art gallery theme. The gallery is not for modern art, but 
+older classic norwegain art pieces. To match the classic art, I wanted fonts with a traditional theme. 
+Which is why I chose these serif fonts.*/
 
 button {
   padding: 10px;
   cursor: pointer;
   border: none;
+  border-radius: 50%;
+}
+
+button img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 button:hover {
   background-color: cornsilk;
   /* scale: 0.95; */
-}
-
-.inner {
-  background-color: #d5cea3;
-  padding: 10px;
-  position: absolute;
-  /* top: 0; */
-  bottom: 0;
-  width: 100%;
-  display: none;
-  z-index: 1;
-}
-.inner p {
-  color: #3c2a21;
-}
-
-#more-info.show {
-  display: block;
-}
-
-.outer img {
-  cursor: pointer;
 }
 
 /* styling for the drop down menu */
@@ -75,42 +75,6 @@ footer {
   position: relative;
 }
 
-#profile-button {
-  border: 1px solid black;
-  margin-right: 10px;
-}
-
-#profile-content {
-  position: absolute;
-  top: 100%;
-  background-color: cornsilk;
-  right: 10px;
-  width: 106px;
-  display: none;
-}
-
-#profile-content ul > li {
-  padding: 10px;
-  border-bottom: 1px solid black;
-}
-
-#profile-content ul > li:hover {
-  background-color: bisque;
-}
-
-#profile-content.show {
-  display: block;
-}
-
-/* or:
-  .show {
-    display: block;
-    this will overwtire the #profile-content. that's why it's important to do 
-    #profile-content.show {
-    display: block;
-  }
-  } */
-
 #slides-container {
   display: flex;
   flex-direction: row;
@@ -120,7 +84,7 @@ footer {
   margin: auto;
 }
 .slides {
-  border: 1px dashed #e5e5cb7a;
+  border: 1.5px solid #e4ddd27a;
   min-width: 100vw;
   height: 100vh;
   display: flex;
@@ -131,18 +95,28 @@ footer {
 
 #navigation {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  top: 50%;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  pointer-events: none; /* Ensures buttons don't block interactions with other elements */
 }
 
-/* styling for the drag drop example */
-#purple-box {
-  background-color: purple;
-  cursor: pointer;
+#prev-button,
+#next-button {
+  pointer-events: auto; /* Allow interaction */
 }
 
-#drop-box {
-  cursor: pointer;
+#prev-button {
+  position: fixed;
+  left: 50px;
+  transform: translateY(-50%); /* Center vertically */
+}
+
+#next-button {
+  position: fixed;
+  right: 50px;
+  transform: translateY(-50%); /* Center vertically */
 }
 
 img {
@@ -159,7 +133,7 @@ img {
   align-items: center;
   justify-content: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .glide-card-inner {
@@ -212,6 +186,7 @@ img {
   align-items: center;
   justify-content: center;
   display: flex;
+  flex-direction: column;
 }
 
 .flip-card-inner {
@@ -258,6 +233,7 @@ img {
   align-items: center;
   justify-content: center;
   display: flex;
+  flex-direction: column;
 }
 
 .open-card-inner {
@@ -304,6 +280,7 @@ img {
   align-items: center;
   justify-content: center;
   display: flex;
+  flex-direction: column;
 }
 
 .cover-card-inner {
@@ -360,17 +337,42 @@ img {
   position: absolute;
 }
 
-/* The images and their settings for changing the background with hover */
+/* The hover background images and their  */
 body.change-background-munch {
   background-image: url("https://ms01.nasjonalmuseet.no/iip/?iiif=/tif/NG.M.00470_BRUK.tif/full/958,1258/0/default.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: top center;
+  animation: fadeIn 5s;
 }
 
 body.change-background-krohg {
   background-image: url("https://ems.dimu.org/image/012uMXPwUExJ?dimension=1200x1200");
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
+  background-position: center;
+}
+
+body.change-background-vigeland {
+  background-image: url("https://vigeland.museum.no/imager/bilder/Gustav-Vigeland/589/standard_gustav-vigeland_d6249d1aefa7d35946ba52fa46420a7b.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
+}
+
+body.change-background-tideman {
+  background-image: url("https://www.fineart.no/i/og/1003596-0.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
