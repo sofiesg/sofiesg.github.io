@@ -18,6 +18,7 @@
     <header>
       <h1>My favorite paintings</h1>
     </header>
+    <!-- This website is a mini art gallery of norwegian art pices.  -->
     <div id="slides-container">
       <div class="slides">
         <button onmouseover="artistMunch" id="cover">
@@ -32,21 +33,34 @@
           </div>
         </button>
       </div>
-      <div class="slides">
-        <button id="flip">
+      <div class="slides" id="flip-card">
+        <div onmouseover="artistVigeland" id="flip-card-inner">
+          <div class="flip-card-front">
           <img
             src="monolitten.webp"
             alt="A tall statue of people crushed on top of eachother"
           />
+          </div>
           <div class="info">
             <p><span class="title">Monolitten</span></p>
             <p>by Gustav Vigeland</p>
             <p>Year: 1928</p>
           </div>
-        </button>
+        </div>
       </div>
       <div class="slides">
-        <div id="overlay">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="albertine.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back" class="info">
+              <h1>John Doe</h1> 
+              <p>Architect & Engineer</p> 
+              <p>We love that guy</p>
+            </div>
+          </div>
+        <!-- <div id="overlay">
           <img
             src="albertine.jpg"
             alt="Painting of prositutes waiting to see a physician"
@@ -57,7 +71,7 @@
             <p>Year: 1887</p>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="slides">
         <div id="spread">
           <img

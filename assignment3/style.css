@@ -5,7 +5,7 @@ body {
   flex-direction: column;
   font-family: "Simonetta", serif;
   align-items: center;
-  max-height: 100%;
+  /* position: fixed; */
   margin: 0;
 }
 
@@ -105,7 +105,49 @@ img {
   justify-content: center;
 }
 
-/* .munch {
+.munch {
   background-image: url(munch.jpg);
   transition: background-image 1s ease;
-} */
+  object-fit: cover;
+}
+
+.flip-card {
+  height: 300px;
+  width: 240px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  height: 300px;
+  width: 240px;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  color: black;
+  transform: rotateY(180deg);
+  background-color: wheat;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
