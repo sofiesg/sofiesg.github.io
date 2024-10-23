@@ -13,7 +13,6 @@ body {
   font-style: normal;
   color: #efeade;
   gap: 20px;
-  transition: background-image 5s ease;
 }
 
 h2 {
@@ -172,11 +171,11 @@ img {
   font-size: 20px;
   line-height: 40px;
   position: absolute;
-  transform: translateX(100%);
+  transform: translateY(100%);
 }
 
 .glide-card-inner:hover .glide-card-back {
-  transform: translateX(0); /* Slide in on hover */
+  transform: translateY(0); /* Slide in on hover */
 }
 
 .flip-card {
@@ -366,13 +365,4 @@ body.change-background-tideman {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
