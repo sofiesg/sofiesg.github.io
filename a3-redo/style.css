@@ -1,5 +1,8 @@
 body {
-  background-color: #1a0f0c;
+  background-image: url(https://api.gwpa.no/photos/48e22edddf877b301e35a3260df2e0108c8e01c3/3000x1972/15671-20221111144105993150/original.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -16,13 +19,19 @@ body {
 }
 
 h2 {
+  color: #eae6d0;
   font-family: "dm-serif-display-regular";
   font-size: 40px;
   font-weight: bold;
   margin: 2rem;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #1a0f0c;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #362f1e;
 }
+/* I have added a stroke to the text so it won't be as hard to read when the background changes to 
+something with a lower color contrast */
+/* I have chosen these fonts due to my art gallery theme. The gallery is not for modern art, but 
+older classic norwegain art pieces. To match the classic art, I wanted fonts with a traditional theme. 
+Which is why I chose these serif fonts.*/
 
 a {
   color: black;
@@ -37,17 +46,13 @@ a:hover {
   color: rgb(137, 34, 14);
 }
 
-/* I have added a stroke to the text so it won't be as hard to read when the background changes to 
-something with a lower color contrast */
-/* I have chosen these fonts due to my art gallery theme. The gallery is not for modern art, but 
-older classic norwegain art pieces. To match the classic art, I wanted fonts with a traditional theme. 
-Which is why I chose these serif fonts.*/
-
 button {
   padding: 10px;
   cursor: pointer;
   border: none;
   border-radius: 50%;
+  background-color: rgb(170, 201, 136);
+  border: 2px solid rgb(124, 161, 91);
 }
 
 button img {
@@ -57,9 +62,11 @@ button img {
 }
 
 button:hover {
-  background-color: cornsilk;
-  /* scale: 0.95; */
+  background-color: rgb(208, 240, 192);
+  border: 2px solid rgb(129, 171, 92);
 }
+/* I went with green colors for the buttons because it went well with 
+the standard background picture and didn't clash with the :hover backgrounds */
 
 /* styling for the drop down menu */
 header,
