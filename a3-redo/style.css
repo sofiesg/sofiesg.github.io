@@ -19,13 +19,12 @@ body {
 }
 
 h2 {
-  color: #eae6d0;
-  font-family: "dm-serif-display-regular";
-  font-size: 40px;
-  font-weight: bold;
+  color: white;
+  font-family: "Young Serif", serif;
+  font-size: 42px;
   margin: 2rem;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: #362f1e;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: #0f0e0e;
 }
 /* I have added a stroke to the text so it won't be as hard to read when the background changes to 
 something with a lower color contrast */
@@ -51,8 +50,8 @@ button {
   cursor: pointer;
   border: none;
   border-radius: 50%;
-  background-color: rgb(170, 201, 136);
-  border: 2px solid rgb(124, 161, 91);
+  background-color: #ede3b8;
+  border: 2px solid #b7a963;
 }
 
 button img {
@@ -62,11 +61,10 @@ button img {
 }
 
 button:hover {
-  background-color: rgb(208, 240, 192);
-  border: 2px solid rgb(129, 171, 92);
+  background-color: #e4cb95;
+  border: 2px solid #bc9e5e;
 }
-/* I went with green colors for the buttons because it went well with 
-the standard background picture and didn't clash with the :hover backgrounds */
+/* I went with a muted yellowtoned beige as it goes well with the background photo  */
 
 /* styling for the drop down menu */
 header,
