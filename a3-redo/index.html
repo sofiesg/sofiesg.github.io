@@ -20,15 +20,20 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <header>
+      <h1>Classic norwegian art</h1>
+      <p>By Sofie Svele Græe</p>
+    </header>
     <div id="slides-container">
-      <header>
-        <h1>Norwegian classics art gallery</h1>
-      </header>
-      <!-- This website is a mini art gallery of classic norwegian art pices.  -->
-      <!-- <header>
-        <h1>My favorite paintings</h1>
-      </header> -->
+      <!-- This website is a mini art gallery of classic norwegian art pices. Photos of the art will be 
+       displayed on "cards" that will be contained in individual slides. They will have an h3 which will 
+       inform users of the art piece's theme or message. When hovering over the cards, they will show their 
+       own unique effect which will reveal a hidden card containing information on the art piece. 
+       The background of the website will also change to an image of the artist(s) behind the art. 
+       The info cards will also have a link to external websites with more detailed information about the art pieces 
+       so users can learn more with little effort on their part. -->
       <!-- First slide -->
+      <!-- Called "glide-card" because the hidden card glides up, cover the front-card -->
       <div class="slides">
         <div class="glide-card">
           <h2>Psychological struggles</h2>
@@ -36,7 +41,7 @@
             <div class="glide-card-front">
               <img
                 src="https://www.nasjonalmuseet.no/globalassets/bilder/edvard-munch/ng.m.009392.jpg?scale=containerxl"
-                alt="Painting of a man standing ona  bridge screaming in horror"
+                alt="Painting of a man standing on a bridge screaming in horror"
               />
             </div>
             <div class="glide-card-back info">
@@ -45,13 +50,14 @@
               <p>1887</p>
               <a
                 href="https://www.nasjonalmuseet.no/en/stories/explore-the-collection/edvard-munch-and-the-scream-in-the-national-museum/"
-                >Read more about The Scream here</a
+                >Learn more about "The Scream" here</a
               >
             </div>
           </div>
         </div>
       </div>
       <!-- Second slide -->
+      <!-- Called "flip-card" because it flips around to reveal it's back -->
       <div class="slides">
         <div class="flip-card">
           <h2>Societal problems</h2>
@@ -68,51 +74,62 @@
               <p>1887</p>
               <a
                 href="https://www.nasjonalmuseet.no/en/collection/object/NG.M.00776"
-                >Learn more about Albertine here</a
+                >Learn more about "Albertine" here</a
               >
             </div>
           </div>
         </div>
       </div>
       <!-- Third slide -->
+      <!-- Called "open-card" because it has a card opening effect -->
       <section class="slides">
         <h2>Existensial or spiritual battles</h2>
-        <div class="card">
+        <div class="open-card-outer">
+          <!--An additional div to contain the open-card and the inside page. I wanted to maintain the same 
+          structure for all cards, but this card needed soemthing different for the opening effect to work.-->
           <div class="open-card">
             <div class="open-card-container">
               <div class="open-card-front">
                 <img
                   src="https://premium.vgc.no/v2/images/85fd1ab7-8c25-4b3c-af13-bbef320938af?fit=crop&format=auto&h=992&w=668&s=624b90d81714de51c5763dacca8108a8400e8cf9"
-                  alt="Statue portraying a people stacked on top of eachother creating a big column"
+                  alt="Statue portraying a people of different ages stacked on top of eachother creating a tall column"
                 />
               </div>
               <div class="open-card-back">
-                <a href="vg.no">Learn more here</a>
+                <a href="https://vigeland.museum.no/en/vigelandpark/monolith"
+                  >Learn more about "The Monolith" here</a
+                >
               </div>
             </div>
           </div>
           <div class="inside-page info">
-            <h3>Monolitten</h3>
+            <h3>The Monolith</h3>
             <p>by Gustav Vigeland</p>
             <p>1928</p>
           </div>
         </div>
       </section>
       <!-- Fourth slide -->
+      <!-- Called "out-card" because the hidden card slides out from underneath the front card-->
       <div class="slides">
-        <div class="cover-card">
+        <div class="out-card">
           <h2>The national romatic era</h2>
-          <div class="cover-card-inner">
-            <div class="cover-card-front">
+          <div class="out-card-inner">
+            <div class="out-card-front">
               <img
                 src="https://ms01.nasjonalmuseet.no/iip/?iiif=/tif/NG.M.00467_FERDIG50msH_crop.tif/full/1736,1258/0/default.jpg"
                 alt="Painting of a bridal procession on boats through a fjord"
               />
             </div>
-            <div class="cover-card-back info">
+            <div class="out-card-back info">
               <h3>Bridal Procession on the Hardangerfjord</h3>
               <p>by Adolph Tideman & Hans Gude</p>
               <p>1848</p>
+              <a
+                href="https://www.nasjonalmuseet.no/en/collection/object/NG.M.00467"
+                >Learn more about "Bridal Procession on the Hardangerfjord"
+                here</a
+              >
             </div>
           </div>
         </div>

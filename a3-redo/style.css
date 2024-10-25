@@ -15,6 +15,7 @@ body {
   flex-direction: column;
   text-align: center;
   margin: 0;
+  min-height: 90vh;
   max-width: 1000px;
   justify-content: space-between;
   align-items: center;
@@ -24,6 +25,12 @@ body {
   font-style: normal;
   color: #efeade;
   gap: 20px;
+}
+
+h1 {
+  color: black;
+  font-family: "Young Serif", serif;
+  font-size: 42px;
 }
 
 h2 {
@@ -46,13 +53,30 @@ something with a lower color contrast */
 older classic norwegain art pieces. To match the classic art, I wanted fonts with a traditional theme. 
 Which is why I chose these serif fonts.*/
 
+header {
+  min-width: 100vw;
+  padding: 10px;
+  background-color: wheat;
+  color: black;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  justify-content: space-between;
+}
+/* added left: 0; because the header would overflow outside the window on the left. */
+
+header h1,
+p {
+  margin: 0 40px 0 20px;
+}
+
 a {
   color: black;
   font-size: 18px;
   font-style: italic;
-  max-width: 150px;
+  max-width: 190px;
   line-height: normal;
-  margin-top: 50px;
 }
 
 a:hover {
@@ -79,19 +103,6 @@ button:hover {
   border: 2px solid #bc9e5e;
 }
 /* I went with a muted yellowtoned beige as it goes well with the background photo  */
-
-/* styling for the drop down menu */
-header,
-footer {
-  width: 100%;
-  height: 50px;
-  background-color: cornsilk;
-  color: black;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  position: relative;
-}
 
 #slides-container {
   display: flex;
@@ -165,6 +176,12 @@ img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+.glide-card-inner:hover {
+  background-image: url("https://ms01.nasjonalmuseet.no/iip/?iiif=/tif/NG.M.00470_BRUK.tif/full/958,1258/0/default.jpg");
+  background-size: cover;
+  background-position: top center;
+}
+
 .glide-card-front,
 .glide-card-back {
   position: absolute;
@@ -193,8 +210,16 @@ img {
   transform: translateY(100%);
 }
 
+/* Glide-card effects: */
 .glide-card-inner:hover .glide-card-back {
-  transform: translateY(0); /* Slide in on hover */
+  transform: translateY(0);
+}
+/* Makes tghe hidden-card glide in over the front-card */
+
+.glide-card-inner:hover {
+  background-image: url("https://ms01.nasjonalmuseet.no/iip/?iiif=/tif/NG.M.00470_BRUK.tif/full/958,1258/0/default.jpg");
+  background-size: cover;
+  background-position: top center;
 }
 
 .flip-card {
@@ -296,7 +321,7 @@ img {
   line-height: 40px;
 }
 
-.cover-card {
+.out-card {
   height: 100vh;
   width: 100vw;
   perspective: 1000px;
@@ -307,7 +332,7 @@ img {
   position: absolute;
 }
 
-.cover-card-inner {
+.out-card-inner {
   position: relative;
   height: 300px;
   width: 240px;
@@ -317,8 +342,8 @@ img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.cover-card-front,
-.cover-card-back {
+.out-card-front,
+.out-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -326,7 +351,7 @@ img {
   backface-visibility: hidden;
 }
 
-.cover-card-back {
+.out-card-back {
   color: black;
   transform: rotateY(180deg);
   background-color: wheat;
@@ -344,7 +369,7 @@ img {
   z-index: -1;
 }
 
-.cover-card-inner:hover .cover-card-back {
+.out-card-inner:hover .out-card-back {
   transform: translateX(+100%);
 }
 
@@ -365,13 +390,19 @@ img {
   position: absolute;
 }
 
+/* .glide-card:hover {
+  background-image: url("https://ms01.nasjonalmuseet.no/iip/?iiif=/tif/NG.M.00470_BRUK.tif/full/958,1258/0/default.jpg");
+  background-size: cover;
+  background-position: top center;
+} */
+
 /* The hover background images and their  */
-body.change-background-munch {
+/* body.change-background-munch {
   background-image: url("https://ms01.nasjonalmuseet.no/iip/?iiif=/tif/NG.M.00470_BRUK.tif/full/958,1258/0/default.jpg");
   background-size: cover;
   background-position: top center;
   animation: fadeIn 5s;
-}
+} */
 
 body.change-background-krohg {
   background-image: url("https://ems.dimu.org/image/012uMXPwUExJ?dimension=1200x1200");
@@ -463,7 +494,7 @@ body.change-background-tideman {
 } */
 
 /* A container to hold the flip card and the inside page */
-.card {
+.open-card-outer {
   height: 300px;
   width: 240px;
   position: relative;
@@ -471,8 +502,6 @@ body.change-background-tideman {
   width: 15rem;
   border-radius: 10px;
 }
-
-/* Flip card - covering both the front and inside front page */
 
 /* An outer container to hold the flip card. This excludes the inside page */
 .open-card {
@@ -526,23 +555,19 @@ body.change-background-tideman {
   z-index: 1;
   border-radius: 10px;
 }
-
 /* right: 0; so the info-card goes to the right instead of following the front */
 
 /* Functionality ====================================*/
 
 /* This is to keep the card centered (within its container) when opened */
-.card:hover {
-  box-shadow: -0.1rem 1.7rem 6.6rem -3.2rem rgba(0, 0, 0, 0.75);
-  width: 30rem;
+.open-card-outer:hover {
+  width: 480px;
 }
+/* I have the width double of what the folded card is so when the card opens, 
+the unfolded card will stay centered instead of the front card going left, 
+making the slide appear uneven */
 
 /* When the card is hovered, the flip card container will rotate */
-.card:hover .open-card-container {
+.open-card-outer:hover .open-card-container {
   transform: rotateY(-180deg);
-}
-
-/* When the card is hovered, the shadow on the inside page will shrink to the left */
-.card:hover .inside-page {
-  box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0, 0, 0, 0.1);
 }
