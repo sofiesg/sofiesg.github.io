@@ -66,7 +66,7 @@ krohgDiv.addEventListener("mouseout", () => {
 
 // -----------------------------------------------------------
 //Changes the background to a photo of Gustav Vigeland when hovering over his statue card
-const vigelandDiv = document.querySelector(".open-card-inner");
+const vigelandDiv = document.querySelector(".open-card-outer");
 console.log(krohgDiv);
 
 vigelandDiv.addEventListener("mouseover", () => {
@@ -79,7 +79,7 @@ vigelandDiv.addEventListener("mouseout", () => {
 
 //----------------------------------------------------
 //Changes the background to a photograph of Adolph Tideman & Hans Gude when hovering over their painting card
-const tidemanDiv = document.querySelector(".cover-card-inner");
+const tidemanDiv = document.querySelector(".out-card-inner");
 console.log(krohgDiv);
 
 tidemanDiv.addEventListener("mouseover", () => {

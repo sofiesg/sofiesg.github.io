@@ -25,7 +25,9 @@ body {
   font-style: normal;
   color: #efeade;
   gap: 20px;
+  transition: background-image 1s ease-in;
 }
+/* The transition is for how the background image will change when hovering over the different cards. */
 
 h1 {
   color: black;
@@ -45,7 +47,7 @@ h2 {
 h3 {
   color: black;
   font-family: "Young Serif", serif;
-  font-size: 26;
+  font-size: 24;
 }
 /* I have added a stroke to the text so it won't be as hard to read when the background changes to 
 something with a lower color contrast */
@@ -176,7 +178,7 @@ img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.glide-card-inner:hover {
+.glide-card-inner:hover ~ body {
   background-image: url("https://ms01.nasjonalmuseet.no/iip/?iiif=/tif/NG.M.00470_BRUK.tif/full/958,1258/0/default.jpg");
   background-size: cover;
   background-position: top center;
@@ -216,7 +218,7 @@ img {
 }
 /* Makes tghe hidden-card glide in over the front-card */
 
-.glide-card-inner:hover {
+.glide-card-inner:hover ~ body {
   background-image: url("https://ms01.nasjonalmuseet.no/iip/?iiif=/tif/NG.M.00470_BRUK.tif/full/958,1258/0/default.jpg");
   background-size: cover;
   background-position: top center;
@@ -289,7 +291,7 @@ img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.open-card:hover .flip-card-inner {
+.open-card:hover .open-card-inner {
   transform: rotateY(180deg);
 }
 
@@ -370,7 +372,7 @@ img {
 }
 
 .out-card-inner:hover .out-card-back {
-  transform: translateX(+100%);
+  transform: translateX(100%);
 }
 
 .title {
@@ -390,19 +392,12 @@ img {
   position: absolute;
 }
 
-/* .glide-card:hover {
-  background-image: url("https://ms01.nasjonalmuseet.no/iip/?iiif=/tif/NG.M.00470_BRUK.tif/full/958,1258/0/default.jpg");
-  background-size: cover;
-  background-position: top center;
-} */
-
 /* The hover background images and their  */
-/* body.change-background-munch {
+body.change-background-munch {
   background-image: url("https://ms01.nasjonalmuseet.no/iip/?iiif=/tif/NG.M.00470_BRUK.tif/full/958,1258/0/default.jpg");
   background-size: cover;
   background-position: top center;
-  animation: fadeIn 5s;
-} */
+}
 
 body.change-background-krohg {
   background-image: url("https://ems.dimu.org/image/012uMXPwUExJ?dimension=1200x1200");
@@ -414,10 +409,10 @@ body.change-background-vigeland {
   background-image: url("https://vigeland.museum.no/imager/bilder/Gustav-Vigeland/589/standard_gustav-vigeland_d6249d1aefa7d35946ba52fa46420a7b.jpg");
   background-position: center;
   background-attachment: fixed;
-  /* -webkit-background-size: cover;
+  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; */
+  background-size: cover;
 }
 
 body.change-background-tideman {
