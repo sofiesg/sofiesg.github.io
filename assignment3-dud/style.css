@@ -1,0 +1,153 @@
+body {
+  background-color: rgb(26, 14, 10);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  font-family: "Simonetta", serif;
+  align-items: center;
+  /* position: fixed; */
+  margin: 0;
+}
+
+header {
+  background-color: blanchedalmond;
+  width: 100%;
+  padding: 20px;
+  color: black;
+  position: fixed;
+}
+
+footer {
+  background-color: blanchedalmond;
+  width: 100%;
+  padding: 20px;
+  color: black;
+  position: fixed;
+  bottom: 0px;
+}
+
+#slides-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: auto;
+}
+
+.slides {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  height: 300px;
+  width: 240px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.info {
+  height: 300px;
+  width: 240px;
+  border-radius: 10px;
+  background-color: wheat;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  opacity: 0;
+  transition: transform 1s ease, opacity 0.6s ease;
+}
+/* Using position: absolute so the info card stays hidden behind the image card. I'm also using align-items: center;
+  justify-content: center; so the text will be centered on the card */
+/* bottom: -100% so it's hidden below the image */
+
+.info p {
+  font-size: 18px;
+  line-height: 2em;
+}
+
+#cover,
+#flip {
+  position: relative;
+  width: 240px;
+  height: 300px;
+  overflow: hidden;
+  padding: none;
+  border: none;
+  border-radius: 10px;
+}
+
+#cover:hover .info {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+/* transform: translateY(-100%) so it moves up over the image */
+
+#navigation button {
+  padding: 10px;
+  color: black;
+  background-color: antiquewhite;
+}
+
+#navigation {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.munch {
+  background-image: url(munch.jpg);
+  transition: background-image 1s ease;
+  object-fit: cover;
+}
+
+.flip-card {
+  height: 300px;
+  width: 240px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  height: 300px;
+  width: 240px;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  color: black;
+  transform: rotateY(180deg);
+  background-color: wheat;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}

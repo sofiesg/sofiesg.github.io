@@ -3,97 +3,155 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Norwegian artists</title>
+    <title>Art gallery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
     <header>
-      <h1>My favorite paintings</h1>
+      <h1>Classic norwegian art</h1>
+      <p>By Sofie Svele Græe</p>
     </header>
-    <!-- This website is a mini art gallery of norwegian art pices.  -->
     <div id="slides-container">
+      <!-- This website is a mini art gallery of classic norwegian art pices. Photos of the art will be 
+       displayed on "cards" that will be contained in individual slides. They will have an h3 which will 
+       inform users of the art piece's theme or message. When hovering over the cards, they will show their 
+       own unique effect which will reveal a hidden card containing information on the art piece. 
+       The background of the website will also change to an image of the artist(s) behind the art. 
+       The info cards will also have a link to external websites with more detailed information about the art pieces 
+       so users can learn more with little effort on their part. -->
+      <!-- First slide -->
+      <!-- Called "glide-card" because the hidden card glides up, cover the front-card -->
       <div class="slides">
-        <button onmouseover="artistMunch" id="cover">
-          <img
-            src="skrik.jpg"
-            alt="Painting of a terrified man screaming on a bridge"
-          />
-          <div class="info">
-            <p><span class="title">The Scream</span>/p></p>
-            <p>by Edvard Munch</p>
-            <p>Year: 1893</p>
-          </div>
-        </button>
-      </div>
-      <div class="slides" id="flip-card">
-        <div onmouseover="artistVigeland" id="flip-card-inner">
-          <div class="flip-card-front">
-          <img
-            src="monolitten.webp"
-            alt="A tall statue of people crushed on top of eachother"
-          />
-          </div>
-          <div class="info">
-            <p><span class="title">Monolitten</span></p>
-            <p>by Gustav Vigeland</p>
-            <p>Year: 1928</p>
+        <div class="glide-card">
+          <h2>Psychological struggles</h2>
+          <div class="glide-card-inner">
+            <div class="glide-card-front">
+              <img
+                src="https://www.nasjonalmuseet.no/globalassets/bilder/edvard-munch/ng.m.009392.jpg?scale=containerxl"
+                alt="Painting of a man standing on a bridge screaming in horror"
+              />
+            </div>
+            <div class="glide-card-back info">
+              <h3>The Scream</h3>
+              <p>Edvard Munch</p>
+              <p>1887</p>
+              <a
+                href="https://www.nasjonalmuseet.no/en/stories/explore-the-collection/edvard-munch-and-the-scream-in-the-national-museum/"
+                >Learn more about "The Scream" here</a
+              >
+            </div>
           </div>
         </div>
       </div>
+      <!-- Second slide -->
+      <!-- Called "flip-card" because it flips around to reveal it's back -->
       <div class="slides">
         <div class="flip-card">
+          <h2>Societal problems</h2>
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="albertine.jpg" alt="Avatar" style="width:300px;height:300px;">
+              <img
+                src="https://ms01.nasjonalmuseet.no/iip/?iiif=/tif/NG.M.00776-PUBLISERING.tif/full/1950,1258/0/default.jpg"
+                alt="Painting of prostitutes in a physician waiting room"
+              />
             </div>
-            <div class="flip-card-back" class="info">
-              <h1>John Doe</h1> 
-              <p>Architect & Engineer</p> 
-              <p>We love that guy</p>
+            <div class="flip-card-back info">
+              <h3>Albertine</h3>
+              <p>by Christian Krohg</p>
+              <p>1887</p>
+              <a
+                href="https://www.nasjonalmuseet.no/en/collection/object/NG.M.00776"
+                >Learn more about "Albertine" here</a
+              >
             </div>
-          </div>
-        <!-- <div id="overlay">
-          <img
-            src="albertine.jpg"
-            alt="Painting of prositutes waiting to see a physician"
-          />
-          <div class="info">
-            <p><span class="title">Albertine</span></p>
-            <p>by Christian Krogh</p>
-            <p>Year: 1887</p>
           </div>
         </div>
-      </div> -->
+      </div>
+      <!-- Third slide -->
+      <!-- Called "open-card" because it has a card opening effect -->
+      <section class="slides">
+        <h2>Existensial or spiritual battles</h2>
+        <div class="open-card-outer">
+          <!--An additional div to contain the open-card and the inside page. I wanted to maintain the same 
+          structure for all cards, but this card needed soemthing different for the opening effect to work.-->
+          <div class="open-card">
+            <div class="open-card-container">
+              <div class="open-card-front">
+                <img
+                  src="https://premium.vgc.no/v2/images/85fd1ab7-8c25-4b3c-af13-bbef320938af?fit=crop&format=auto&h=992&w=668&s=624b90d81714de51c5763dacca8108a8400e8cf9"
+                  alt="Statue portraying a people of different ages stacked on top of eachother creating a tall column"
+                />
+              </div>
+              <div class="open-card-back">
+                <a href="https://vigeland.museum.no/en/vigelandpark/monolith"
+                  >Learn more about "The Monolith" here</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="inside-card info">
+            <h3>The Monolith</h3>
+            <p>by Gustav Vigeland</p>
+            <p>1928</p>
+          </div>
+        </div>
+      </section>
+      <!-- Fourth slide -->
+      <!-- Called "out-card" because the hidden card slides out from underneath the front card-->
       <div class="slides">
-        <div id="spread">
-          <img
-            src="bridal-procession.jpg"
-            alt="painting of a bridal procession on boats through a fjord"
-          />
-          <div class="info">
-            <p>
-              <span class="title">Bridal Procession on the Hardangerfjord</span>
-            </p>
-            <p>by Adolph Tideman & Hans Gude</p>
-            <p>Year: 1848</p>
+        <div class="out-card">
+          <h2>The national romatic era</h2>
+          <div class="out-card-inner">
+            <div class="out-card-front">
+              <img
+                src="https://ms01.nasjonalmuseet.no/iip/?iiif=/tif/NG.M.00467_FERDIG50msH_crop.tif/full/1736,1258/0/default.jpg"
+                alt="Painting of a bridal procession on boats through a fjord"
+              />
+            </div>
+            <div class="out-card-back info">
+              <h3>Bridal Procession on the Hardangerfjord</h3>
+              <p>by Adolph Tideman & Hans Gude</p>
+              <p>1848</p>
+              <a
+                href="https://www.nasjonalmuseet.no/en/collection/object/NG.M.00467"
+                >Learn more about "Bridal Procession on the Hardangerfjord"
+                here</a
+              >
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- Navigation for the slides -->
     <div id="navigation">
-      <button id="prev-button">Previous slide</button>
-      <button id="next-button">Next slide</button>
+      <button id="prev-button">
+        <img
+          src="https://img.icons8.com/?size=48&id=88110&format=png"
+          alt="Previous slide"
+        />
+      </button>
+      <button id="next-button">
+        <img
+          src="https://img.icons8.com/?size=48&id=85789&format=png"
+          alt="Next slide"
+        />
+      </button>
     </div>
     <footer>
-      <p>Made by Sofie</p>
+      <p>This website</p>
     </footer>
   </body>
 </html>

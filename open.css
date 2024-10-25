@@ -1,0 +1,76 @@
+.open-card-outer {
+  height: 300px;
+  width: 240px;
+  position: relative;
+  transition: all 1s ease;
+  width: 15rem;
+  border-radius: 10px;
+}
+
+/* A container for the open-card's front-card and the back of the front card: */
+.open-card {
+  height: 300px;
+  width: 240px;
+  perspective: 1000px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  transition: all 1s ease;
+  visibility: hidden;
+  z-index: 100;
+  border-radius: 10px;
+}
+
+.open-card > * {
+  visibility: visible;
+}
+/* visibility: visible; so what's in the open-card will be visible */
+
+.open-card-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+}
+/* transition: all 1s ease; so you can se the card opens instead of it going straight for the opened look. */
+
+.open-card-front,
+.open-card-back {
+  backface-visibility: hidden;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.inside-card {
+  background-color: wheat;
+  height: 300px;
+  width: 240px;
+  position: absolute;
+  right: 0;
+  transition: all 1s ease;
+  width: 15rem;
+  z-index: 1;
+  border-radius: 10px;
+}
+/* right: 0; so the info-card goes to the right instead of following the front */
+
+.open-card-outer:hover {
+  width: 480px;
+}
+/* I have the width double of what the folded card is so when the card opens, 
+  the unfolded card will stay centered instead of the front card going left, 
+  making the slide appear uneven */
+
+.open-card-outer:hover .open-card-container {
+  transform: rotateY(-180deg);
+}
+/* rotateY(-180deg) so the .open-card-container will rotate when hovering */

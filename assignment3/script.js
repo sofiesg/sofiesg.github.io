@@ -36,17 +36,56 @@ function gotoNext() {
   window.scrollTo({ left: distance, behavior: "smooth" });
 }
 
-const vigelandCard = document.querySelector("#flip");
+//-----------------------------------------
+//change background to Edvard Munch's self portrait when hovering over the Scream painting card (glide-card-inner)
 
-vigelandCard.addEventListener("mouseover", function () {
-  document.body.style.backgroundImage =
-    "url('https://vigeland.museum.no/imager/bilder/Gustav-Vigeland/589/standard_gustav-vigeland_d6249d1aefa7d35946ba52fa46420a7b.jpg')";
-  document.body.style.backgroundSize = "cover";
-  document.body.style.backgroundPosition = "center";
-});
-//makes the body background change to the artist of the current card when hovering.
+const munchDiv = document.querySelector(".glide-card-inner");
+console.log(munchDiv);
 
-vigelandCard.addEventListener("mouseout", function () {
-  document.body.style.backgroundImage = "";
+munchDiv.addEventListener("mouseover", () => {
+  document.body.classList.add("change-background-munch");
 });
-// Returns the body background to it's normal state when the user is no longer hovering the card
+
+munchDiv.addEventListener("mouseout", () => {
+  document.body.classList.remove("change-background-munch");
+});
+
+//---------------------------------------------------------
+//Changes the background to a portrait of Christian Krohg when hovering over his painting card
+
+const krohgDiv = document.querySelector(".flip-card-inner");
+console.log(krohgDiv);
+
+krohgDiv.addEventListener("mouseover", () => {
+  document.body.classList.add("change-background-krohg");
+});
+
+krohgDiv.addEventListener("mouseout", () => {
+  document.body.classList.remove("change-background-krohg");
+});
+
+// -----------------------------------------------------------
+//Changes the background to a photo of Gustav Vigeland when hovering over his statue card
+const vigelandDiv = document.querySelector(".open-card-outer");
+console.log(krohgDiv);
+
+vigelandDiv.addEventListener("mouseover", () => {
+  document.body.classList.add("change-background-vigeland");
+});
+
+vigelandDiv.addEventListener("mouseout", () => {
+  document.body.classList.remove("change-background-vigeland");
+});
+
+//----------------------------------------------------
+//Changes the background to a photograph of Adolph Tideman & Hans Gude when hovering over their painting card
+const tidemanDiv = document.querySelector(".out-card-inner");
+console.log(krohgDiv);
+
+tidemanDiv.addEventListener("mouseover", () => {
+  document.body.classList.add("change-background-tideman");
+});
+
+tidemanDiv.addEventListener("mouseout", () => {
+  document.body.classList.remove("change-background-tideman");
+});

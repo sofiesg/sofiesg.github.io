@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Norwegian artists</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>My favorite paintings</h1>
+    </header>
+    <!-- This website is a mini art gallery of norwegian art pices.  -->
+    <div id="slides-container">
+      <div class="slides">
+        <button onmouseover="artistMunch" id="cover">
+          <img
+            src="skrik.jpg"
+            alt="Painting of a terrified man screaming on a bridge"
+          />
+          <div class="info">
+            <p><span class="title">The Scream</span>/p></p>
+            <p>by Edvard Munch</p>
+            <p>Year: 1893</p>
+          </div>
+        </button>
+      </div>
+      <div class="slides" id="flip-card">
+        <div onmouseover="artistVigeland" id="flip-card-inner">
+          <div class="flip-card-front">
+          <img
+            src="monolitten.webp"
+            alt="A tall statue of people crushed on top of eachother"
+          />
+          </div>
+          <div class="info">
+            <p><span class="title">Monolitten</span></p>
+            <p>by Gustav Vigeland</p>
+            <p>Year: 1928</p>
+          </div>
+        </div>
+      </div>
+      <div class="slides">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="albertine.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back" class="info">
+              <h1>John Doe</h1> 
+              <p>Architect & Engineer</p> 
+              <p>We love that guy</p>
+            </div>
+          </div>
+        <!-- <div id="overlay">
+          <img
+            src="albertine.jpg"
+            alt="Painting of prositutes waiting to see a physician"
+          />
+          <div class="info">
+            <p><span class="title">Albertine</span></p>
+            <p>by Christian Krogh</p>
+            <p>Year: 1887</p>
+          </div>
+        </div>
+      </div> -->
+      <div class="slides">
+        <div id="spread">
+          <img
+            src="bridal-procession.jpg"
+            alt="painting of a bridal procession on boats through a fjord"
+          />
+          <div class="info">
+            <p>
+              <span class="title">Bridal Procession on the Hardangerfjord</span>
+            </p>
+            <p>by Adolph Tideman & Hans Gude</p>
+            <p>Year: 1848</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="navigation">
+      <button id="prev-button">Previous slide</button>
+      <button id="next-button">Next slide</button>
+    </div>
+    <footer>
+      <p>Made by Sofie</p>
+    </footer>
+  </body>
+</html>
