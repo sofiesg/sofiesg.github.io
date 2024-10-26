@@ -36,6 +36,21 @@ function gotoNext() {
   window.scrollTo({ left: distance, behavior: "smooth" });
 }
 
+const munchCard = document.querySelector("#cover");
+
+munchCard.addEventListener("mouseover", function () {
+  document.body.style.backgroundImage = "url('munch.jpg')";
+  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundPosition = "center";
+});
+//makes the body background change to the artist of the current card when hovering.
+
+munchCard.addEventListener("mouseout", function () {
+  document.body.style.backgroundImage = "";
+});
+// Returns the body background to it's normal state when the user is no longer hovering the card
+
+
 const vigelandCard = document.querySelector("#flip");
 
 vigelandCard.addEventListener("mouseover", function () {
