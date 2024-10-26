@@ -90,12 +90,17 @@ footer {
 }
 /* To keep it at the bottom of the page */
 
+footer a {
+  margin: auto;
+}
+
 a {
   color: black;
   font-size: 18px;
   font-style: italic;
   max-width: 190px;
   line-height: normal;
+  margin: 20px;
 }
 
 a:hover {
