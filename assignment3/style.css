@@ -43,17 +43,17 @@ h2 {
   -webkit-text-stroke-width: 1.2px;
   -webkit-text-stroke-color: #0f0e0e;
 }
+/* I have added a stroke to the text so it won't be as hard to read when the background changes to 
+something with a lower color contrast */
 
 h3 {
   color: black;
   font-family: "Young Serif", serif;
   font-size: 24;
 }
-/* I have added a stroke to the text so it won't be as hard to read when the background changes to 
-something with a lower color contrast */
 /* I have chosen these fonts due to my art gallery theme. The gallery is not for modern art, but 
 older classic norwegain art pieces. To match the classic art, I wanted fonts with a traditional theme. 
-Which is why I chose these serif fonts.*/
+Which is why I wanted these serif fonts.*/
 
 header,
 footer {
@@ -68,11 +68,15 @@ footer {
   justify-content: space-between;
 }
 /* added left: 0; because the header would overflow outside the window on the left. */
+/* I chose to have a background in my header so the text is easier to read on top of the different backgrounds.*/
+/* The header has a semi-transparent background. I chose that because a solid background seemed awkward and 
+out of place and I wanted the background image to continue, covering the whole screen.*/
 
 header h1,
 p {
   margin: 0 40px 0 20px;
 }
+/* Wanted the elements to have some space from the edges of the header */
 
 header p {
   color: rgb(0, 0, 0);
@@ -82,7 +86,9 @@ header p {
 
 footer {
   bottom: 0;
+  font-size: 22px;
 }
+/* To keep it at the bottom of the page */
 
 a {
   color: black;
@@ -104,6 +110,7 @@ button {
   background-color: #ede3b8;
   border: 2px solid #b7a963;
 }
+/* Added cursor:pointer to further communicate that the pointed arrow buttons can be clicked */
 
 button img {
   width: 40px;
@@ -115,7 +122,7 @@ button:hover {
   background-color: #e4cb95;
   border: 2px solid #bc9e5e;
 }
-/* I went with a muted yellowtoned beige as it goes well with the background photo  */
+/* I went with a muted yellowtoned beige as it goes well with the background photo */
 
 #slides-container {
   display: flex;
@@ -135,30 +142,23 @@ button:hover {
   align-items: center;
 }
 
+/* The navigation + placement and style of the nav buttons */
 #navigation {
   position: fixed;
   top: 50%;
   display: flex;
   width: 100%;
   justify-content: space-between;
-  pointer-events: none; /* Ensures buttons don't block interactions with other elements */
-}
-
-#prev-button,
-#next-button {
-  pointer-events: auto; /* Allow interaction */
 }
 
 #prev-button {
   position: fixed;
   left: 50px;
-  transform: translateY(-50%); /* Center vertically */
 }
 
 #next-button {
   position: fixed;
   right: 50px;
-  transform: translateY(-50%); /* Center vertically */
 }
 
 img {
@@ -167,6 +167,8 @@ img {
   border-radius: 10px;
   object-fit: cover;
 }
+
+/* The first card showing The Scream by Munch */
 
 .glide-card {
   height: 100vh;
@@ -185,14 +187,6 @@ img {
   text-align: center;
   overflow: hidden;
   transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.glide-card-inner:hover ~ body {
-  background-image: url("https://ms01.nasjonalmuseet.no/iip/?iiif=/tif/NG.M.00470_BRUK.tif/full/958,1258/0/default.jpg");
-  background-size: cover;
-  background-position: top center;
 }
 
 .glide-card-front,
@@ -202,9 +196,10 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s ease-in-out; /* Smooth transition */
+  transition: transform 0.6s ease-in-out;
   backface-visibility: hidden;
 }
+/* transition so the info card glides in instead of just suddenly appearing on top */
 
 .glide-card-back {
   color: black;
@@ -227,7 +222,7 @@ img {
 .glide-card-inner:hover .glide-card-back {
   transform: translateY(0);
 }
-/* Makes tghe hidden-card glide in over the front-card */
+/* Makes the hidden-card glide in over the front-card */
 
 .glide-card-inner:hover ~ body {
   background-image: url("https://ms01.nasjonalmuseet.no/iip/?iiif=/tif/NG.M.00470_BRUK.tif/full/958,1258/0/default.jpg");
@@ -235,6 +230,7 @@ img {
   background-position: top center;
 }
 
+/* The second card showing Albertine by Krohg */
 .flip-card {
   height: 100vh;
   width: 100vw;
@@ -255,6 +251,7 @@ img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* The transforms beneat makes the card flip over*/
 .flip-card-inner:hover {
   transform: rotateY(180deg);
 }
@@ -282,6 +279,7 @@ img {
   line-height: 40px;
 }
 
+/* The third card showing "The monolith by Vigeland */
 .open-card-outer {
   height: 300px;
   width: 240px;
@@ -346,14 +344,17 @@ img {
   top: 0;
   width: 100%;
   border-radius: 10px;
-  /* -webkit-backface-visibility: hidden;
-  backface-visibility: hidden; */
 }
 
 .inside-card {
   background-color: wheat;
+  color: black;
   height: 300px;
   width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   right: 0;
   transition: all 1s ease;
@@ -394,6 +395,7 @@ img {
 }
 /* rotateY(-180deg) so the .open-card-container will rotate when hovering */
 
+/* The fourth card showing Bridal Procession on the Hardangerfjord by Adolph Tideman & Hans Gude */
 .out-card {
   height: 100vh;
   width: 100vw;
@@ -411,8 +413,6 @@ img {
   width: 240px;
   text-align: center;
   transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .out-card-front,
@@ -420,13 +420,10 @@ img {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
 .out-card-back {
   color: black;
-  transform: rotateY(180deg);
   background-color: wheat;
   border-radius: 10px;
   align-items: center;
@@ -441,25 +438,15 @@ img {
   transition: 1.5s ease;
   z-index: -1;
 }
+/* Used z-index so the info card is hidden behind the front-card */
 
 .out-card-inner:hover .out-card-back {
   transform: translateX(100%);
 }
-
-.info {
-  height: 300px;
-  width: 240px;
-  border-radius: 10px;
-  background-color: wheat;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-}
+/* Makes the hidden info card slide out from underneath the front-card */
 
 /* ------------------------------------------------------------ */
+/* BODY FUNCTIONS */
 /* The hover background images and their size + positions. I have used cover so the images fits the screen and doesn't duplicate*/
 body.change-background-munch {
   background-image: url("https://ms01.nasjonalmuseet.no/iip/?iiif=/tif/NG.M.00470_BRUK.tif/full/958,1258/0/default.jpg");
@@ -489,4 +476,5 @@ body.change-background-tideman {
 
 /* I wanted the background to change to photos and portaits of the artist. 
 This is so the users can better connect with the art piece. I wanted it to 
-almost feel like the artist is standing behind the canvas, holding it up to show their skills*/
+almost feel like the artist is standing behind the canvas, showing the*/
+/*  */
